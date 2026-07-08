@@ -1,0 +1,24 @@
+{
+  "brandName": "BNA Contábil",
+  "title": "BNA Contábil - Inteligência Fiscal e Contabilidade Tributária",
+  "company": {
+    "name": "BNA Contábil & Tributário",
+    "url": "https://bnaconsultoria.com.br",
+    "socialLink": {
+      "linkedin": "#",
+      "instagram": "#",
+      "facebook": "#",
+      "youtube": "#",
+      "github": "#",
+      "dribble": "#",
+      "discord": "#",
+      "support": "#"
+    }
+  },
+  "logo": {
+    "main": "",
+    "logoIcon": "",
+    "logoFab": "",
+    "logoWatermark": ""
+  }
+}
