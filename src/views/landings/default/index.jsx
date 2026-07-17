@@ -16,7 +16,6 @@ import {
   feature21,
   feature18,
   hero,
-  integration,
   other,
   testimonial
 } from './data';
@@ -33,7 +32,6 @@ export default function Main() {
       <LazySection
         sections={[
           { importFunc: () => import('@/blocks/metrics').then((module) => ({ default: module.Metrics5 })), props: metrics },
-          { importFunc: () => import('@/blocks/integration').then((module) => ({ default: module.Integration2 })), props: integration },
           { importFunc: () => import('@/blocks/other').then((module) => ({ default: module.Other1 })), props: other }
         ]}
         offset="200px"

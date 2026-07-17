@@ -49,14 +49,42 @@ export default function LoginView() {
           width: '50%',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          bgcolor: 'grey.900',
+          bgcolor: '#121212',
           color: 'common.white',
           p: 6,
           position: 'relative',
-          ...getBackgroundDots(theme.vars.palette.grey[800], 1.5, 30)
+          overflow: 'hidden'
         }}
       >
-        <Stack sx={{ gap: 4, zIndex: 1 }}>
+        {/* Blurred background image */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: 1,
+            height: 1,
+            zIndex: 1,
+            backgroundImage: 'url(/assets/images/hero-bg.jpeg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(3px)',
+            transform: 'scale(1.05)'
+          }}
+        />
+        {/* Dark gradient overlay */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: 1,
+            height: 1,
+            zIndex: 2,
+            background: 'linear-gradient(180deg, rgba(15, 15, 15, 0.72) 0%, rgba(18, 18, 18, 0.85) 100%)'
+          }}
+        />
+        <Stack sx={{ gap: 4, zIndex: 3 }}>
           <Logo sx={{ '& path': { fill: '#fff' } }} /> {/* White logo styling */}
           <Stack sx={{ gap: 2, mt: 8 }}>
             <Typography variant="h1" sx={{ color: 'common.white', fontWeight: 700, lineHeight: 1.2 }}>
@@ -68,7 +96,7 @@ export default function LoginView() {
           </Stack>
         </Stack>
 
-        <Stack sx={{ gap: 3, mt: 4, zIndex: 1 }}>
+        <Stack sx={{ gap: 3, mt: 4, zIndex: 3 }}>
           <Stack direction="row" sx={{ gap: 2, alignItems: 'center' }}>
             <Box sx={{ p: 1, bgcolor: 'grey.800', borderRadius: 2, color: 'primary.light' }}>
               <SvgIcon name="tabler-file-analytics" size={20} />
@@ -97,7 +125,7 @@ export default function LoginView() {
           </Stack>
         </Stack>
 
-        <Box sx={{ zIndex: 1 }}>
+        <Box sx={{ zIndex: 3 }}>
           <Typography variant="caption" sx={{ color: 'grey.500' }}>
             © {new Date().getFullYear()} {branding.company.name}. Todos os direitos reservados.
           </Typography>

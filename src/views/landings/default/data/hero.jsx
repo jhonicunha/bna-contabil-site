@@ -7,7 +7,7 @@ export const hero = {
   chip: {
     label: (
       <>
-        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+        <Typography variant="caption" sx={{ color: 'grey.400' }}>
           BNA Consultoria
         </Typography>
         <Chip

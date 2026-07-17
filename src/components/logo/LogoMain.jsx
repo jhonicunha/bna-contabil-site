@@ -10,10 +10,11 @@ import branding from '@/branding.json';
 
 /***************************  LOGO - MAIN  ***************************/
 
-export default function LogoMain() {
+export default function LogoMain({ reverse = false }) {
   const theme = useTheme();
   const logoMainPath = branding.logo.main;
   const palette = theme?.vars ? theme.vars.palette : theme.palette;
+  const fillColor = reverse ? '#ffffff' : palette.primary.main;
 
   return logoMainPath ? (
     <CardMedia src={logoMainPath} component="img" alt="logo" sx={{ width: { xs: 95, lg: 110 } }} loading="lazy" />
@@ -21,7 +22,7 @@ export default function LogoMain() {
     <Box sx={{ width: { xs: 95, lg: 110 }, height: { xs: 38, lg: 44 } }}>
       <svg viewBox="0 0 977.68 395" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
         {/* 1. Transformed paths (originally translated in the SVG file) */}
-        <g transform="translate(-11.16 -13.75)" fill={palette.primary.main}>
+        <g transform="translate(-11.16 -13.75)" fill={fillColor}>
           {/* Logo Letter B */}
           <path d="M279.63,293.51V157.75H389.88c22.63,0,41.14,30.44,41.14,67.88,0,37.85-18.51,67.88-41.14,67.88Zm0-271.52h104.9c21.4,0,38.67,28.39,38.67,63.76s-17.27,64.18-38.67,64.18H279.63ZM411.27,152.81a71.93,71.93,0,0,0-25.91-139H245.48v288h144.4c42,0,75.29-34.56,75.29-76.11A76.67,76.67,0,0,0,411.27,152.81Z" />
           {/* Divider Line */}
@@ -45,7 +46,7 @@ export default function LogoMain() {
         </g>
 
         {/* 2. Untransformed paths (originally not translated in the SVG file) */}
-        <g fill={palette.primary.main}>
+        <g fill={fillColor}>
           {/* Letter N in CONTABIL */}
           <polygon points="535.45 371.94 539.05 371.94 539.05 346.12 558.73 371.94 562.34 371.94 562.34 340.21 558.73 340.21 558.73 366.03 539.05 340.21 535.45 340.21 535.45 371.94" />
           {/* Letter L in CONTABIL */}

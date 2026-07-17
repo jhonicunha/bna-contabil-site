@@ -1,5 +1,5 @@
 // @next
-import { Archivo, Figtree, Roboto, Playfair_Display } from 'next/font/google';
+import { Archivo, Figtree, Roboto, Playfair_Display, Outfit } from 'next/font/google';
 
 export let Themes;
 
@@ -31,9 +31,11 @@ const fontRobot = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '50
 const fontArchivo = Archivo({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 const fontFigtree = Figtree({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 const fontPlayfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
+const fontOutfit = Outfit({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700', '800', '900'] });
 
 export const FONT_ROBOTO = fontRobot.style.fontFamily;
 export const FONT_ARCHIVO = fontArchivo.style.fontFamily;
 export const FONT_FIGTREE = fontFigtree.style.fontFamily;
 export const FONT_PLAYFAIR = fontPlayfair.style.fontFamily;
+export const FONT_OUTFIT = fontOutfit.style.fontFamily;
 

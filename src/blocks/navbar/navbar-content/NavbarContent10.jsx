@@ -31,7 +31,7 @@ import { withAlpha } from '@/utils/colorUtils';
  * - [NavbarContent10 API](https://docs.soflinc.com.br/ui-kit/development/components/navbar/navbar-content/navbarcontent10#props-details)
  */
 
-export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, animated }) {
+export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, animated, isHomepage = false }) {
   const theme = useTheme();
 
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -42,18 +42,42 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
     threshold: 0
   });
 
+  const updatedSecondaryBtn = {
+    ...secondaryBtn,
+    children: isHomepage ? <SvgIcon name="tabler-user" size={18} color="common.white" /> : secondaryBtn?.children,
+    sx: {
+      ...secondaryBtn?.sx,
+      ...(isHomepage && {
+        color: 'common.white',
+        borderColor: 'rgba(255, 255, 255, 0.25)',
+        '&:hover': {
+          bgcolor: 'rgba(255, 255, 255, 0.08)',
+          borderColor: 'rgba(255, 255, 255, 0.4)'
+        }
+      })
+    }
+  };
+
   return (
-    <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', width: 1 }}>
-      <Logo to={landingBaseUrl} />
+    <Box sx={{ display: 'flex', alignItems: 'center', width: 1, position: 'relative' }}>
+      {/* Left Column: Logo */}
+      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+        <Logo to={landingBaseUrl} reverse={isHomepage} />
+      </Box>
+
+      {/* Center Column: Menu */}
       {!downMD && navItems && (
-        <Box sx={{ bgcolor: trigger ? 'transparent' : 'grey.200', borderRadius: 10, transition: 'background-color 0.25s ease' }}>
-          <NavMenu {...{ navItems }} isSticky={trigger} />
+        <Box sx={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ bgcolor: trigger ? 'transparent' : (isHomepage ? 'rgba(255, 255, 255, 0.08)' : 'grey.200'), borderRadius: 10, transition: 'background-color 0.25s ease' }}>
+            <NavMenu {...{ navItems }} isSticky={trigger} menuTextColor={isHomepage ? 'common.white' : undefined} />
+          </Box>
         </Box>
       )}
-      <Stack direction="row" sx={{ gap: { xs: 1, md: 1.5 } }}>
+
+      {/* Right Column: Actions / Drawer Toggle */}
+      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: { xs: 1, md: 1.5 } }}>
         {!downSM && (
           <>
-            <NavSecondaryButton {...secondaryBtn} />
             <ButtonAnimationWrapper>
               {animated ? (
                 <motion.div
@@ -74,16 +98,30 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
                 <NavPrimaryButton {...primaryBtn} />
               )}
             </ButtonAnimationWrapper>
+            <NavSecondaryButton {...updatedSecondaryBtn} />
           </>
         )}
         {downMD && (
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <MenuPopper
               offset={downSM ? 12 : 16}
               toggleProps={{
-                children: <SvgIcon name="tabler-menu-2" color="text.primary" />,
+                children: <SvgIcon name="tabler-menu-2" color={isHomepage ? 'common.white' : 'text.primary'} />,
                 color: 'inherit',
-                sx: { minWidth: 40, width: 40, height: 40, p: 0 }
+                sx: { 
+                  minWidth: 40, 
+                  width: 40, 
+                  height: 40, 
+                  p: 0,
+                  ...(isHomepage && {
+                    borderColor: 'rgba(255, 255, 255, 0.25)',
+                    color: 'common.white',
+                    '&:hover': {
+                      bgcolor: 'rgba(255, 255, 255, 0.08)',
+                      borderColor: 'rgba(255, 255, 255, 0.4)'
+                    }
+                  })
+                }
               }}
             >
               <ContainerWrapper
@@ -100,18 +138,18 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
                 )}
                 {downSM && (
                   <Stack direction="row" sx={{ justifyContent: 'space-between', gap: 1, px: 2, py: 2.5, mx: -2, bgcolor: 'grey.100' }}>
-                    <NavSecondaryButton {...secondaryBtn} />
                     <ButtonAnimationWrapper>
                       <NavPrimaryButton {...primaryBtn} />
                     </ButtonAnimationWrapper>
+                    <NavSecondaryButton {...updatedSecondaryBtn} />
                   </Stack>
                 )}
               </ContainerWrapper>
             </MenuPopper>
           </Box>
         )}
-      </Stack>
-    </Stack>
+      </Box>
+    </Box>
   );
 }
 

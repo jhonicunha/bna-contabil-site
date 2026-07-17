@@ -96,6 +96,9 @@ function NavList({ item, menuTextColor, isSticky }) {
 
   const currentPath = usePathname(); // Get the current path
   const toggleProps = { color: menuTextColor || 'text.primary', py: 1.5, typography: 'caption2', pl: { md: 2.25, lg: 3 } };
+  const isReverse = menuTextColor === 'common.white';
+  const highlightColor = isReverse ? 'common.white' : 'primary.main';
+
   const buttonProps = {
     sx: {
       ...toggleProps,
@@ -109,7 +112,7 @@ function NavList({ item, menuTextColor, isSticky }) {
         left: { md: 18, lg: 24 },
         right: { md: 18, lg: 24 },
         height: '2px',
-        bgcolor: 'primary.main',
+        bgcolor: highlightColor,
         transform: 'scaleX(0)',
         transformOrigin: 'center',
         transition: 'transform 0.25s ease-in-out'
@@ -119,12 +122,12 @@ function NavList({ item, menuTextColor, isSticky }) {
       },
       '&:hover': {
         bgcolor: 'transparent',
-        color: 'primary.main'
+        color: highlightColor
       },
       ...(item.icon && { justifyContent: 'center', gap: 0.75 }),
       ...(item.link &&
         (currentPath === item.link || (item.link === '/sections' && currentPath.includes('/sections'))) && {
-          color: 'primary.main',
+          color: highlightColor,
           fontWeight: 600
         })
     },

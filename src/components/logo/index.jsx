@@ -15,7 +15,7 @@ import LogoIcon from './LogoIcon';
 
 /***************************  MAIN - LOGO  ***************************/
 
-export default function LogoSection({ isIcon, sx, to }) {
+export default function LogoSection({ isIcon, sx, to, reverse }) {
   const theme = useTheme();
   const palette = theme?.vars ? theme.vars.palette : theme.palette;
 
@@ -26,7 +26,7 @@ export default function LogoSection({ isIcon, sx, to }) {
         sx={{ ...sx, display: 'block', '&:focus-visible': generateFocusVisibleStyles(palette.primary.main) }}
         aria-label="logo"
       >
-        {isIcon ? <LogoIcon /> : <LogoMain />}
+        {isIcon ? <LogoIcon reverse={reverse} /> : <LogoMain reverse={reverse} />}
       </ButtonBase>
     </NextLink>
   );

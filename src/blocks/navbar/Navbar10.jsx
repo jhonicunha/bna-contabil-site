@@ -42,17 +42,25 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
  * - [Navbar10 API](https://docs.soflinc.com.br/ui-kit/development/components/navbar/navbar10#props-details)
  */
 
-export default function Navbar10({ children, isFixed = true, ...props }) {
+export default function Navbar10({ children, isFixed = true, isHomepage = false, ...props }) {
+  const triggerSX = isHomepage
+    ? {
+        bgcolor: 'rgba(25, 25, 25, 0.75)',
+        backdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+      }
+    : undefined;
+
   return (
     <>
-      <ElevationScroll isFixed={isFixed} {...props}>
+      <ElevationScroll isFixed={isFixed} triggerSX={triggerSX} {...props}>
         <AppBar {...(!isFixed && { position: 'static', elevation: 0 })} component="nav" color="inherit" sx={{ background: 'transparent' }}>
           <StyledToolbar>
             <ContainerWrapper>{children}</ContainerWrapper>
           </StyledToolbar>
         </AppBar>
       </ElevationScroll>
-      {isFixed && <StyledToolbar />}
+      {isFixed && !isHomepage && <StyledToolbar />}
     </>
   );
 }

@@ -1,5 +1,4 @@
-// @project
-import { FONT_ARCHIVO, FONT_FIGTREE, FONT_PLAYFAIR } from '@/config';
+import { FONT_ARCHIVO, FONT_FIGTREE, FONT_OUTFIT } from '@/config';
 
 /***************************  DEFAULT / AI THEME - TYPOGRAPHY  ***************************/
 
@@ -9,7 +8,7 @@ export default function typography(theme) {
 
     // heading - large
     h1: {
-      fontFamily: FONT_PLAYFAIR,
+      fontFamily: FONT_OUTFIT,
       fontWeight: 600,
       fontSize: 57,
 
@@ -28,7 +27,7 @@ export default function typography(theme) {
 
     // heading - medium
     h2: {
-      fontFamily: FONT_PLAYFAIR,
+      fontFamily: FONT_OUTFIT,
       fontWeight: 600,
       fontSize: 45,
       lineHeight: 1.156,
@@ -45,7 +44,7 @@ export default function typography(theme) {
 
     // display - medium
     h3: {
-      fontFamily: FONT_PLAYFAIR,
+      fontFamily: FONT_OUTFIT,
       fontWeight: 500,
       fontSize: 28,
       lineHeight: 1.286,
@@ -62,7 +61,7 @@ export default function typography(theme) {
 
     // display - small
     h4: {
-      fontFamily: FONT_PLAYFAIR,
+      fontFamily: FONT_OUTFIT,
       fontWeight: 500,
       fontSize: 24,
       lineHeight: 1.333,
