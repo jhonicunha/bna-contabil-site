@@ -6,10 +6,7 @@ import { useState, useRef, useEffect, createElement, useMemo } from 'react';
 // @mui
 import Box from '@mui/material/Box';
 
-// @project
-import Loader from '@/components/Loader';
-
-export default function LazySection({ sections, fallback = <Loader />, offset = '0px', placeholderHeight = 400 }) {
+export default function LazySection({ sections, fallback = null, offset = '0px', placeholderHeight = 400 }) {
   const sectionList = useMemo(() => (Array.isArray(sections) ? sections : [sections]), [sections]);
   const [isVisible, setIsVisible] = useState(false);
   const [loadedComponents, setLoadedComponents] = useState(Array(sectionList.length).fill(null));
@@ -45,7 +42,6 @@ export default function LazySection({ sections, fallback = <Loader />, offset = 
 LazySection.propTypes = {
   sections: PropTypes.oneOfType([PropTypes.array, PropTypes.any]),
   fallback: PropTypes.node,
-  Loader: PropTypes.any,
   offset: PropTypes.string,
   placeholderHeight: PropTypes.number
 };

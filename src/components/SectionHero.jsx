@@ -73,7 +73,7 @@ const options = [
 
 /***************************  SECTION HERO  ***************************/
 
-export default function SectionHero({ heading, search = true, offer = false, breadcrumbs }) {
+export default function SectionHero({ heading, search = false, offer = false, breadcrumbs }) {
   const theme = useTheme();
   const router = useRouter();
 

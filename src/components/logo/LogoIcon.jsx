@@ -32,12 +32,12 @@ export default function LogoIcon() {
       {logoIconPath ? (
         <CardMedia src={logoIconPath} component="img" alt="logo" sx={{ height: 1 }} loading="lazy" />
       ) : (
-        <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
-          <g fill={palette.primary.main}>
-            {/* Left slash: thicker, styled */}
-            <path d="M 12 42 C 10.5 42 9.5 41 10.0 39.5 L 21.5 12.5 C 22.0 11.0 23.5 10.0 25.0 10.0 H 31.0 C 32.5 10.0 33.5 11.0 33.0 12.5 L 21.5 39.5 C 21.0 41.0 19.5 42.0 18.0 42.0 H 12 Z" />
-            {/* Right slash: thinner, parallel */}
-            <path d="M 28 42 L 36.5 15.0 C 36.8 14.0 37.8 13.0 39.0 13.0 H 42.5 L 34.0 40.0 C 33.7 41.0 32.7 42.0 31.5 42.0 H 28 Z" />
+        <svg viewBox="0 0 156 288" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+          <g fill={palette.primary.main} transform="translate(-11.16 -13.75)">
+            {/* Left slanted line */}
+            <path d="M89.82,264.69,167,112.38a5.14,5.14,0,0,0,.63-2,4.06,4.06,0,0,0-.5-2.1L143,67,24.58,293.23s-5.35,8.5,6.38,8.49H85.44A27.75,27.75,0,0,1,83,291.22c-.46-8.63,2.28-17.55,6.72-26.38Z" />
+            {/* Right slanted line */}
+            <path d="M89,50.8,11.8,203.11a5,5,0,0,0-.64,2,4,4,0,0,0,.51,2.1l24.17,41.22L154.22,22.26s5.34-8.51-6.39-8.49l-54.48,0a27.8,27.8,0,0,1,2.43,10.52c.46,8.63-2.28,17.55-6.72,26.37Z" />
           </g>
         </svg>
       )}

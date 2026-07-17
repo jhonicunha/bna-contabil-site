@@ -8,13 +8,13 @@ const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 export const navbar = {
   customization: false,
   secondaryBtn: {
-    children: 'Área do Cliente',
-    href: '/sections/auth/login',
-    startIcon: <SvgIcon name="tabler-user" size={16} />,
+    children: <SvgIcon name="tabler-user" size={18} />,
+    href: '/auth/login',
     sx: { 
-      minWidth: 140, 
+      minWidth: 40, 
+      width: 40,
       height: 40, 
-      px: 2.2,
+      p: 0,
       border: '1px solid',
       borderColor: 'grey.300',
       borderRadius: 2,
@@ -44,9 +44,8 @@ export const navbar = {
   },
   navItems: [
     { id: 'inicio', title: 'Início', link: '/' },
-    { id: 'servicos', title: 'Serviços', link: '#servicos' },
-    { id: 'socios', title: 'Sócios', link: '#socios' },
-    { id: 'faq', title: 'Perguntas Frequentes', link: '#faq' },
-    { id: 'contato', title: 'Contato', link: '#contato' }
+    { id: 'quem-somos', title: 'Quem Somos', link: '/quem-somos' },
+    { id: 'servicos', title: 'Serviços', link: '/servicos' },
+    { id: 'contato', title: 'Contato', link: '/contato' }
   ]
 };

@@ -7,7 +7,6 @@ import Box from '@mui/material/Box';
 
 // @project
 import branding from '@/branding.json';
-import { FONT_PLAYFAIR, FONT_ARCHIVO } from '@/config';
 
 /***************************  LOGO - MAIN  ***************************/
 
@@ -17,44 +16,45 @@ export default function LogoMain() {
   const palette = theme?.vars ? theme.vars.palette : theme.palette;
 
   return logoMainPath ? (
-    <CardMedia src={logoMainPath} component="img" alt="logo" sx={{ width: { xs: 112, lg: 140 } }} loading="lazy" />
+    <CardMedia src={logoMainPath} component="img" alt="logo" sx={{ width: { xs: 95, lg: 110 } }} loading="lazy" />
   ) : (
-    <Box sx={{ width: { xs: 160, lg: 195 }, height: { xs: 32, lg: 38 } }}>
-      <svg viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
-        <g fill={palette.primary.main}>
-          {/* Left slash: thicker, styled */}
-          <path d="M 16 42 C 14.5 42 13.5 41 14.0 39.5 L 23.5 12.5 C 24.0 11.0 25.5 10.0 27.0 10.0 H 33.0 C 34.5 10.0 35.5 11.0 35.0 12.5 L 25.5 39.5 C 25.0 41.0 23.5 42.0 22.0 42.0 H 16 Z" />
-          {/* Right slash: thinner, parallel */}
-          <path d="M 32 42 L 40.5 15.0 C 40.8 14.0 41.8 13.0 43.0 13.0 H 46.5 L 38.0 40.0 C 37.7 41.0 36.7 42.0 35.5 42.0 H 32 Z" />
+    <Box sx={{ width: { xs: 95, lg: 110 }, height: { xs: 38, lg: 44 } }}>
+      <svg viewBox="0 0 977.68 395" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+        {/* 1. Transformed paths (originally translated in the SVG file) */}
+        <g transform="translate(-11.16 -13.75)" fill={palette.primary.main}>
+          {/* Logo Letter B */}
+          <path d="M279.63,293.51V157.75H389.88c22.63,0,41.14,30.44,41.14,67.88,0,37.85-18.51,67.88-41.14,67.88Zm0-271.52h104.9c21.4,0,38.67,28.39,38.67,63.76s-17.27,64.18-38.67,64.18H279.63ZM411.27,152.81a71.93,71.93,0,0,0-25.91-139H245.48v288h144.4c42,0,75.29-34.56,75.29-76.11A76.67,76.67,0,0,0,411.27,152.81Z" />
+          {/* Divider Line */}
+          <path d="M444,370.18H244.27v3.64H444Zm544.86,0H781.16v3.64H988.84Z" />
+          {/* Logo Letter A */}
+          <path d="M900,13.75H864.22l-95.83,287.9h20.15a156.58,156.58,0,0,1-1.23-18.92,78.17,78.17,0,0,1,3.7-24.67c30-89.31,26.23-79,78.14-234,46,149.49,48.45,157.89,85.55,277.61h34.14Z" />
+          {/* Logo Letter N */}
+          <path d="M703.35,110.82V84.91l-.41-45.25V13.75h-16c5.75,18.92,8.22,26.73,8.22,72V286L554.46,13.75H520.33v287.9h16.45c-6.17-18.5-8.23-26.73-8.23-72V29.38L669.21,301.65h34.14Z" />
+          {/* Left slanted line */}
+          <path d="M89.82,264.69,167,112.38a5.14,5.14,0,0,0,.63-2,4.06,4.06,0,0,0-.5-2.1L143,67,24.58,293.23s-5.35,8.5,6.38,8.49H85.44A27.75,27.75,0,0,1,83,291.22c-.46-8.63,2.28-17.55,6.72-26.38Z" />
+          {/* Right slanted line */}
+          <path d="M89,50.8,11.8,203.11a5,5,0,0,0-.64,2,4,4,0,0,0,.51,2.1l24.17,41.22L154.22,22.26s5.34-8.51-6.39-8.49l-54.48,0a27.8,27.8,0,0,1,2.43,10.52c.46,8.63-2.28,17.55-6.72,26.37Z" />
+          {/* Letter C in CONTABIL */}
+          <path d="M471.3,386.25a16.22,16.22,0,0,0,11.41-4.85l-2.45-2.5a12.39,12.39,0,0,1-9,4c-6.84,0-12.61-6-12.61-13.12s5.77-13.07,12.61-13.07a12.39,12.39,0,0,1,9,4l2.45-2.5a16.05,16.05,0,0,0-11.41-4.85,16.43,16.43,0,0,0,0,32.85" />
+          {/* Letter O in CONTABIL */}
+          <path d="M512.83,382.92c-6.83,0-12.61-6-12.61-13.12s5.78-13.07,12.61-13.07,12.57,6,12.57,13.07-5.73,13.12-12.57,13.12m0,3.33a16.43,16.43,0,1,0-16.26-16.45A16.53,16.53,0,0,0,512.83,386.25Z" />
+          {/* Letter B in CONTABIL */}
+          <path d="M681.28,382.42V370.68h10.58c3.93,0,6.7,2.45,6.7,5.87s-2.77,5.87-6.7,5.87Zm0-15V357.24h10c3.51,0,6,2.12,6,5.08s-2.5,5.08-6,5.08Zm-3.6,18.3h15.11c5.5,0,9.42-3.61,9.42-8.69,0-3.46-2.12-6.33-5.77-8.18,2.86-1.66,4.52-3.6,4.52-7,0-4.62-3.6-7.9-8.73-7.9H677.68Z" />
+          {/* Letter A in CONTABIL */}
+          <path d="M637.65,375.07,645,358.39l7.34,16.68Zm19.4,10.63H661L647,354h-3.93l-14,31.74H633l3.19-7.21h17.69Zm-4.2-40.29-3.65-.83-5.59,6.65h2.68Z" />
         </g>
-        {/* BNA Text - Serif style */}
-        <text
-          x="58"
-          y="32"
-          fill={palette.primary.main}
-          style={{
-            fontFamily: FONT_PLAYFAIR,
-            fontSize: '30px',
-            fontWeight: '700',
-            letterSpacing: '1px'
-          }}
-        >
-          BNA
-        </text>
-        {/* CONTÁBIL Text - Sans-serif, small, wide tracking */}
-        <text
-          x="58"
-          y="44"
-          fill={palette.primary.main}
-          style={{
-            fontFamily: FONT_ARCHIVO,
-            fontSize: '9px',
-            fontWeight: '600',
-            letterSpacing: '6px'
-          }}
-        >
-          CONTÁBIL
-        </text>
+
+        {/* 2. Untransformed paths (originally not translated in the SVG file) */}
+        <g fill={palette.primary.main}>
+          {/* Letter N in CONTABIL */}
+          <polygon points="535.45 371.94 539.05 371.94 539.05 346.12 558.73 371.94 562.34 371.94 562.34 340.21 558.73 340.21 558.73 366.03 539.05 340.21 535.45 340.21 535.45 371.94" />
+          {/* Letter L in CONTABIL */}
+          <polygon points="741.52 368.53 741.52 340.21 737.91 340.21 737.91 371.94 758.84 371.94 758.84 368.53 741.52 368.53" />
+          {/* Letter T in CONTABIL */}
+          <polygon points="589.67 371.94 593.27 371.94 593.27 343.63 603.94 343.63 603.94 340.21 579 340.21 579 343.63 589.67 343.63 589.67 371.94" />
+          {/* Letter I in CONTABIL */}
+          <rect x="712.35" y="340.21" width="3.6" height="31.74" />
+        </g>
       </svg>
     </Box>
   );

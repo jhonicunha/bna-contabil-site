@@ -40,10 +40,9 @@ const data = [
     title: 'Navegação',
     menu: [
       { label: 'Início', link: { href: '/' } },
-      { label: 'Serviços', link: { href: '#servicos' } },
-      { label: 'Sócios', link: { href: '#socios' } },
-      { label: 'Perguntas Frequentes', link: { href: '#faq' } },
-      { label: 'Contato', link: { href: '#contato' } }
+      { label: 'Quem Somos', link: { href: '/quem-somos' } },
+      { label: 'Serviços', link: { href: '/servicos' } },
+      { label: 'Contato', link: { href: '/contato' } }
     ]
   },
   {

@@ -1,8 +1,6 @@
 'use client';
 import PropTypes from 'prop-types';
 
-import { useEffect, useRef, useState } from 'react';
-
 // @mui
 import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -12,11 +10,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
-import { GraphicsCard } from '@/components/cards';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import GraphicsImage from '@/components/GraphicsImage';
 import SvgIcon from '@/components/SvgIcon';
@@ -41,65 +38,15 @@ const options = { root: null, rootMargin: '0px', threshold: 0.6 };
  * - [Hero17 API](https://docs.soflinc.com.br/ui-kit/development/components/hero/hero17#props-details)
  */
 
-export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, videoThumbnail, listData }) {
+export default function Hero17({ chip, headLine, captionLine, primaryBtn, listData }) {
   const theme = useTheme();
   const boxRadius = { xs: 24, sm: 32, md: 40 };
-
-  const containerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start']
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.4, 0.6], [0.9, 0.92, 0.94, 0.96, 1]);
-
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  // Handle video play/pause based on intersection with the viewport
-  useEffect(() => {
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (videoRef.current && !isPlaying) {
-            videoRef.current
-              .play()
-              .then(() => {
-                setIsPlaying(true);
-              })
-              .catch((error) => {
-                console.error('Autoplay was prevented:', error);
-              });
-          }
-        } else {
-          if (videoRef.current && isPlaying) {
-            videoRef.current.pause();
-            setIsPlaying(false);
-          }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-    const videoElement = videoRef.current;
-
-    if (videoElement) {
-      observer.observe(videoElement);
-    }
-
-    return () => {
-      if (videoElement) {
-        observer.unobserve(videoElement);
-      }
-    };
-  }, [isPlaying]);
 
   return (
     <>
       <Box
         sx={{
-          height: { xs: 592, sm: 738, md: 878 },
+          height: { xs: 460, sm: 520, md: 575 },
           position: 'absolute',
           top: 0,
           left: 0,
@@ -112,8 +59,8 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
         }}
       />
       <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-        <Box ref={containerRef}>
-          <Box sx={{ pb: { xs: 3, sm: 4, md: 5 } }}>
+        <Box>
+          <Box sx={{ pb: { xs: 1, sm: 2, md: 3 } }}>
             <Stack sx={{ alignItems: 'center', gap: 1.5 }}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.6 }}
@@ -209,30 +156,6 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
               </Stack>
             </Stack>
           </Box>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.6 }}
-            whileInView={{ opacity: 1, scale: 0.9 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            style={{ scale }}
-          >
-            <GraphicsCard sx={{ border: '5px solid', borderColor: 'grey.300' }}>
-              <video
-                playsInline
-                ref={videoRef}
-                width="100%"
-                height="100%"
-                style={{ display: 'flex', objectFit: 'cover' }}
-                preload="metadata"
-                autoPlay={false}
-                loop={true}
-                muted={true}
-                poster={videoThumbnail}
-              >
-                <source src={videoSrc} type="video/mp4" />
-              </video>
-            </GraphicsCard>
-          </motion.div>
         </Box>
       </ContainerWrapper>
     </>
@@ -244,7 +167,5 @@ Hero17.propTypes = {
   headLine: PropTypes.string,
   captionLine: PropTypes.string,
   primaryBtn: PropTypes.any,
-  videoSrc: PropTypes.string,
-  videoThumbnail: PropTypes.string,
   listData: PropTypes.array
 };
