@@ -177,62 +177,68 @@ export default function Feature20({ heading, caption, image, features, actionBtn
             </Box>
           </GraphicsCard>
         </motion.div>
-        <Stack sx={{ alignItems: 'center', gap: 3 }}>
-          <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: { xs: '75%', sm: '45%' }, textAlign: 'center' }}>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: 0.4
-              }}
-            >
-              {caption}
-            </motion.div>
-          </Typography>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.5
-            }}
-          >
-            <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
-              {secondaryBtn && (
+        {(caption || actionBtn || secondaryBtn) && (
+          <Stack sx={{ alignItems: 'center', gap: 3 }}>
+            {caption && (
+              <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: { xs: '75%', sm: '45%' }, textAlign: 'center' }}>
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  whileHover={{ scale: 1.06 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.4
+                  }}
                 >
-                  <ButtonAnimationWrapper>
-                    <Button variant="outlined" {...secondaryBtn} />
-                  </ButtonAnimationWrapper>
+                  {caption}
                 </motion.div>
-              )}
-              {actionBtn && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  whileHover={{ scale: 1.06 }}
-                >
-                  <ButtonAnimationWrapper>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                      {...actionBtn}
-                    />
-                  </ButtonAnimationWrapper>
-                </motion.div>
-              )}
-            </Stack>
-          </motion.div>
-        </Stack>
+              </Typography>
+            )}
+            {(secondaryBtn || actionBtn) && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.5
+                }}
+              >
+                <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
+                  {secondaryBtn && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      whileHover={{ scale: 1.06 }}
+                    >
+                      <ButtonAnimationWrapper>
+                        <Button variant="outlined" {...secondaryBtn} />
+                      </ButtonAnimationWrapper>
+                    </motion.div>
+                  )}
+                  {actionBtn && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      whileHover={{ scale: 1.06 }}
+                    >
+                      <ButtonAnimationWrapper>
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
+                          {...actionBtn}
+                        />
+                      </ButtonAnimationWrapper>
+                    </motion.div>
+                  )}
+                </Stack>
+              </motion.div>
+            )}
+          </Stack>
+        )}
       </Stack>
     </ContainerWrapper>
   );

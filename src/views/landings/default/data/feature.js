@@ -71,9 +71,6 @@ export const feature5 = {
 
 export const feature20 = {
   heading: 'Como Podemos te Ajudar?',
-  caption: 'Conecte sua empresa a soluções fiscais e contábeis de alto nível, focadas na geração de valor e eficiência operacional.',
-  actionBtn: { children: 'Fale Conosco', href: 'https://wa.me/5541999775191', ...linkProps },
-  secondaryBtn: { children: 'Nossos Sócios', href: '/quem-somos' },
   features: [
     {
       icon: 'tabler-file-analytics',
