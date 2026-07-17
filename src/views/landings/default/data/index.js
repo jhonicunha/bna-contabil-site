@@ -1,3 +1,4 @@
+export { aboutSummary } from './about-summary';
 export { clientele, clientele2 } from './clientele';
 export { contactUS } from './contact-us';
 export { cta4, cta5, cta10 } from './cta';

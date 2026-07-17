@@ -1,12 +1,14 @@
 'use client';
 
 // @project
+import { AboutSummary } from '@/blocks/about';
 import { Feature20 } from '@/blocks/feature';
 import { Hero17 } from '@/blocks/hero';
 import LazySection from '@/components/LazySection';
 
 // @data
 import {
+  aboutSummary,
   metrics,
   clientele,
   cta4,
@@ -28,6 +30,7 @@ export default function Main() {
     <>
       <Hero17 {...hero} />
       <Feature20 {...feature20} />
+      <AboutSummary {...aboutSummary} />
 
       <LazySection
         sections={[
