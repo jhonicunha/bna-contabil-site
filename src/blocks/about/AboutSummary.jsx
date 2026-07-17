@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -15,27 +13,21 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'motion/react';
 
 // @project
-import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  ABOUT SUMMARY  ***************************/
 
-export default function AboutSummary({ heading, label, caption, features, actionBtn, images }) {
+export default function AboutSummary({ heading, label, caption, features, images }) {
   const theme = useTheme();
-  const downMD = useMediaQuery(theme.breakpoints.down('md'));
 
-  // Parallelogram clip-path inspired by the BNA logo diagonal slanted lines
-  // Left image: slants top-right to bottom-left
-  const clipLeft = 'polygon(0 0, 85% 0, 100% 100%, 0% 100%)';
-  // Right image: slants top-left to bottom-right
-  const clipRight = 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)';
+  const imageSrc = images?.[0] || '/assets/images/about-1.jpg';
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Grid container spacing={{ xs: 4, md: 6 }} sx={{ alignItems: 'center' }}>
-        {/* Left Column - Masked Images */}
+        {/* Left Column - BNA Logo Symbol Masked Image */}
         <Grid size={{ xs: 12, md: 5 }}>
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -46,71 +38,50 @@ export default function AboutSummary({ heading, label, caption, features, action
             <Box
               sx={{
                 display: 'flex',
-                gap: { xs: 1, sm: 1.5 },
-                position: 'relative',
-                height: { xs: 320, sm: 400, md: 480 }
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: { xs: 360, sm: 420, md: 480 },
+                aspectRatio: '156/288',
+                mx: 'auto'
               }}
             >
-              {/* Left parallelogram image */}
-              <Box
-                sx={{
-                  flex: 1,
-                  position: 'relative',
-                  clipPath: clipLeft,
-                  borderRadius: 0,
-                  overflow: 'hidden'
-                }}
+              <svg
+                viewBox="0 0 156 288"
+                width="100%"
+                height="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ display: 'block' }}
               >
-                <Box
-                  component="img"
-                  src={images?.[0] || '/assets/images/about-1.jpg'}
-                  alt="BNA Consultoria - Equipe"
-                  sx={{
-                    width: 1,
-                    height: 1,
-                    objectFit: 'cover',
-                    objectPosition: 'center'
-                  }}
-                />
-                {/* Subtle overlay caption on left image */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    p: { xs: 2, sm: 3 },
-                    background: 'linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)'
-                  }}
-                >
-                  <Typography variant="body2" sx={{ color: 'common.white', fontWeight: 500 }}>
-                    Solidez jurídica e inteligência fiscal.
-                  </Typography>
-                </Box>
-              </Box>
-
-              {/* Right parallelogram image */}
-              <Box
-                sx={{
-                  flex: 1,
-                  position: 'relative',
-                  clipPath: clipRight,
-                  borderRadius: 0,
-                  overflow: 'hidden'
-                }}
-              >
-                <Box
-                  component="img"
-                  src={images?.[1] || '/assets/images/about-2.jpg'}
-                  alt="BNA Consultoria - Consultoria"
-                  sx={{
-                    width: 1,
-                    height: 1,
-                    objectFit: 'cover',
-                    objectPosition: 'center'
-                  }}
-                />
-              </Box>
+                <defs>
+                  <pattern
+                    id="bna-image-pattern"
+                    patternUnits="userSpaceOnUse"
+                    width="156"
+                    height="288"
+                  >
+                    <image
+                      href={imageSrc}
+                      x="0"
+                      y="0"
+                      width="156"
+                      height="288"
+                      preserveAspectRatio="xMidYMid slice"
+                    />
+                  </pattern>
+                </defs>
+                <g transform="translate(-11.16 -13.75)">
+                  {/* Left slanted line */}
+                  <path
+                    fill="url(#bna-image-pattern)"
+                    d="M89.82,264.69,167,112.38a5.14,5.14,0,0,0,.63-2,4.06,4.06,0,0,0-.5-2.1L143,67,24.58,293.23s-5.35,8.5,6.38,8.49H85.44A27.75,27.75,0,0,1,83,291.22c-.46-8.63,2.28-17.55,6.72-26.38Z"
+                  />
+                  {/* Right slanted line */}
+                  <path
+                    fill="url(#bna-image-pattern)"
+                    d="M89,50.8,11.8,203.11a5,5,0,0,0-.64,2,4,4,0,0,0,.51,2.1l24.17,41.22L154.22,22.26s5.34-8.51-6.39-8.49l-54.48,0a27.8,27.8,0,0,1,2.43,10.52c.46,8.63-2.28,17.55-6.72,26.37Z"
+                  />
+                </g>
+              </svg>
             </Box>
           </motion.div>
         </Grid>
@@ -188,27 +159,6 @@ export default function AboutSummary({ heading, label, caption, features, action
                   ))}
                 </Stack>
               )}
-
-              {/* Action Button */}
-              {actionBtn && (
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.7 }}
-                >
-                  <Box sx={{ mt: 1 }}>
-                    <ButtonAnimationWrapper>
-                      <Button
-                        variant="outlined"
-                        size="large"
-                        sx={{ borderRadius: 2, textTransform: 'none', fontWeight: 600 }}
-                        {...actionBtn}
-                      />
-                    </ButtonAnimationWrapper>
-                  </Box>
-                </motion.div>
-              )}
             </Stack>
           </motion.div>
         </Grid>
@@ -222,6 +172,5 @@ AboutSummary.propTypes = {
   label: PropTypes.string,
   caption: PropTypes.string,
   features: PropTypes.array,
-  actionBtn: PropTypes.any,
   images: PropTypes.array
 };

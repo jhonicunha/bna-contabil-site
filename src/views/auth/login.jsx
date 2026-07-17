@@ -72,7 +72,7 @@ export default function LoginView() {
             transform: 'scale(1.05)'
           }}
         />
-        {/* Dark gradient overlay */}
+        {/* Blue gradient overlay */}
         <Box
           sx={{
             position: 'absolute',
@@ -81,7 +81,7 @@ export default function LoginView() {
             width: 1,
             height: 1,
             zIndex: 2,
-            background: 'linear-gradient(180deg, rgba(15, 15, 15, 0.72) 0%, rgba(18, 18, 18, 0.85) 100%)'
+            background: 'linear-gradient(180deg, rgba(27, 83, 133, 0.75) 0%, rgba(15, 23, 30, 0.90) 100%)'
           }}
         />
         <Stack sx={{ gap: 4, zIndex: 3 }}>

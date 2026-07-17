@@ -11,11 +11,11 @@ export function buildPalette() {
 
   const lightPalette = {
     primary: {
-      lighter: '#E5E5E9',
-      light: '#A9A9BC',
-      main: '#1D1D22',
-      dark: '#121217',
-      darker: '#000000'
+      lighter: '#E8F1FA',
+      light: '#699AC5',
+      main: '#1B5385',
+      dark: '#103D64',
+      darker: '#082743'
     },
     secondary: {
       lighter: '#F1F4F9',

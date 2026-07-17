@@ -3,7 +3,6 @@ export const aboutSummary = {
   heading: 'Excelência Contábil e Tributária ao Alcance do seu Negócio',
   caption:
     'A BNA Consultoria Tributária & Contábil nasceu da união entre a robustez jurídica e a precisão contábil, com o compromisso de gerar caixa, reduzir impostos legalmente e proteger o patrimônio dos nossos clientes.',
-  images: ['/assets/images/about-1.jpg', '/assets/images/about-2.jpg'],
   features: [
     {
       icon: 'tabler-award',
@@ -24,5 +23,5 @@ export const aboutSummary = {
         'Atuamos em total conformidade com a legislação vigente e a LGPD, garantindo proteção jurídica integral ao seu patrimônio.'
     }
   ],
-  actionBtn: { children: 'Conheça a Nossa Equipe', href: '/quem-somos' }
+  images: ['/assets/images/about-1.jpg']
 };
