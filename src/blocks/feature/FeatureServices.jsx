@@ -38,7 +38,7 @@ import Star from '@/images/graphics/Star';
  * - [Feature20 API](https://docs.soflinc.com.br/ui-kit/development/components/feature/feature20#props-details)
  */
 
-export default function Feature20({ heading, caption, image, features, actionBtn, secondaryBtn }) {
+export default function FeatureServices({ heading, caption, image, features, actionBtn, secondaryBtn }) {
   const theme = useTheme();
   const downSM = useMediaQuery(theme.breakpoints.down('sm'));
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -244,7 +244,7 @@ export default function Feature20({ heading, caption, image, features, actionBtn
   );
 }
 
-Feature20.propTypes = {
+FeatureServices.propTypes = {
   heading: PropTypes.string,
   caption: PropTypes.string,
   image: PropTypes.any,

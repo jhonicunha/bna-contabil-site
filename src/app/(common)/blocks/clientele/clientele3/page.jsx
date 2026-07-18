@@ -1,5 +1,5 @@
 // @project
-import { Clientele3 } from '@/blocks/clientele';
+import { Clientele } from '@/blocks/clientele';
 import { DynamicComponentType } from '@/enum';
 
 /***************************  CLIENTELE 3 - DATA  ***************************/
@@ -17,6 +17,7 @@ const data = {
 
 /***************************  BLOCK - CLIENTELE 3  ***************************/
 
-export default function BlockClientele3() {
-  return <Clientele3 {...data} />;
+export default function BlockClientele() {
+  return <Clientele {...data} />;
 }
+

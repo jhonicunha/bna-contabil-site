@@ -1,1 +1,3 @@
-export { default as Navbar10 } from './Navbar10';
+export { default as Navbar } from './Navbar';
+export { default as NavbarContent } from './navbar-content/NavbarContent';
+

@@ -12,7 +12,7 @@ import { useScrollTrigger } from '@mui/material';
 import { motion } from 'motion/react';
 
 // @project
-import { navbar10Height } from '../Navbar10';
+import { navbarHeight } from '../Navbar';
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import Logo from '@/components/logo';
@@ -31,7 +31,7 @@ import { withAlpha } from '@/utils/colorUtils';
  * - [NavbarContent10 API](https://docs.soflinc.com.br/ui-kit/development/components/navbar/navbar-content/navbarcontent10#props-details)
  */
 
-export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, animated, isHomepage = false }) {
+export default function NavbarContent({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, animated, isHomepage = false }) {
   const theme = useTheme();
 
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -127,7 +127,7 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
               <ContainerWrapper
                 sx={{
                   height: 'auto',
-                  maxHeight: { xs: `calc(100vh - ${navbar10Height.xs}px)`, sm: `calc(100vh - ${navbar10Height.sm}px)` },
+                  maxHeight: { xs: `calc(100vh - ${navbarHeight.xs}px)`, sm: `calc(100vh - ${navbarHeight.sm}px)` },
                   overflowY: 'auto'
                 }}
               >
@@ -153,7 +153,7 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
   );
 }
 
-NavbarContent10.propTypes = {
+NavbarContent.propTypes = {
   landingBaseUrl: PropTypes.any,
   navItems: PropTypes.any,
   primaryBtn: PropTypes.any,

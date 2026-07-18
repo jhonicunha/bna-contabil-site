@@ -3,13 +3,16 @@ import branding from '@/branding.json';
 import { DynamicComponentType } from '@/enum';
 
 export const clientele = {
-  title: `${branding.brandName} to transform 12k+ online presence and achieve their business goals.`,
+  title: 'Clientes que confiam no nosso trabalho',
   clienteleList: [
-    { image: { component: 'clientele/Dribbble', type: DynamicComponentType.IMAGE } },
-    { image: { component: 'clientele/Reddit', type: DynamicComponentType.IMAGE } },
-    { image: { component: 'clientele/Mui', type: DynamicComponentType.IMAGE } },
-    { image: { component: 'clientele/Devto', type: DynamicComponentType.IMAGE } },
-    { image: { component: 'clientele/Envato', type: DynamicComponentType.IMAGE } }
+    { name: 'Empresa 1' },
+    { name: 'Empresa 2' },
+    { name: 'Empresa 3' },
+    { name: 'Empresa 4' },
+    { name: 'Empresa 5' },
+    { name: 'Empresa 6' },
+    { name: 'Empresa 7' },
+    { name: 'Empresa 8' }
   ]
 };
 

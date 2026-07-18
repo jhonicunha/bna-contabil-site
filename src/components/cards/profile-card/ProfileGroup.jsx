@@ -18,11 +18,13 @@ export default function ProfileGroup({ review, avatarGroups, sx }) {
   return (
     <Stack sx={{ gap: 1, ...sx }}>
       <Stack sx={{ gap: 0.5 }}>
-        <AvatarGroup max={5} sx={{ justifyContent: 'flex-end', '& .MuiAvatar-root': { borderWidth: 1, ml: -1.75 } }}>
-          {avatarGroups.map((item, index) => (
-            <Avatar key={index} src={GetImagePath(item.avatar)} alt="Avatar" slotProps={{ img: { loading: 'lazy' } }} />
-          ))}
-        </AvatarGroup>
+        {avatarGroups && avatarGroups.length > 0 && (
+          <AvatarGroup max={5} sx={{ justifyContent: 'flex-end', '& .MuiAvatar-root': { borderWidth: 1, ml: -1.75 } }}>
+            {avatarGroups.map((item, index) => (
+              <Avatar key={index} src={GetImagePath(item.avatar)} alt="Avatar" slotProps={{ img: { loading: 'lazy' } }} />
+            ))}
+          </AvatarGroup>
+        )}
         <Typography variant="subtitle2" sx={{ color: 'text.secondary' }}>
           {review}
         </Typography>

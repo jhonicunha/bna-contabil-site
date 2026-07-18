@@ -42,6 +42,7 @@ const data = [
       { label: 'Início', link: { href: '/' } },
       { label: 'Quem Somos', link: { href: '/quem-somos' } },
       { label: 'Serviços', link: { href: '/servicos' } },
+      { label: 'Blog', link: { href: '/blog' } },
       { label: 'Contato', link: { href: '/contato' } }
     ]
   },
@@ -80,7 +81,7 @@ const usefullLinks = [
 
 /***************************  FOOTER - 7  ***************************/
 
-export default function Footer7() {
+export default function Footer() {
   const logoFollowContent = (
     <Stack sx={{ alignItems: 'flex-start', gap: { xs: 1.5, sm: 3 } }}>
       <LogoSection />

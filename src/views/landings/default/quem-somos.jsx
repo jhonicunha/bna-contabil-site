@@ -16,8 +16,8 @@ import SectionHero from '@/components/SectionHero';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
 import branding from '@/branding.json';
-import { Other1 } from '@/blocks/other';
-import { other } from './data';
+import { Partners } from '@/blocks/other';
+import { partners } from './data';
 
 const breadcrumbs = [
   { title: 'Início', to: '/' },
@@ -84,7 +84,7 @@ export default function QuemSomos() {
       </ContainerWrapper>
 
       {/* Partners Section (Sócios Fundadores) */}
-      <Other1 {...other} />
+      <Partners {...partners} />
     </>
   );
 }

@@ -1,12 +1,12 @@
 'use client';
 
 // @project
-import { Feature20, Feature18 } from '@/blocks/feature';
-import { Cta5 } from '@/blocks/cta';
+import { FeatureServices, FeatureWhyUs } from '@/blocks/feature';
+import { CtaContact } from '@/blocks/cta';
 import SectionHero from '@/components/SectionHero';
 
 // @data
-import { feature20, feature18, cta5 } from './data';
+import { featureServices, featureWhyUs, ctaContact } from './data';
 
 const breadcrumbs = [
   { title: 'Início', to: '/' },
@@ -19,13 +19,13 @@ export default function Servicos() {
       <SectionHero heading="Nossos Serviços" breadcrumbs={breadcrumbs} search={false} />
       
       {/* Overview Services Grid */}
-      <Feature20 {...feature20} />
+      <FeatureServices {...featureServices} />
       
       {/* Detailed Specialties Tabs */}
-      <Feature18 {...feature18} />
+      <FeatureWhyUs {...featureWhyUs} />
       
       {/* Call to Action */}
-      <Cta5 {...cta5} />
+      <CtaContact {...ctaContact} />
     </>
   );
 }

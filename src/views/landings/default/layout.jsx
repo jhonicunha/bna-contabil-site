@@ -8,9 +8,8 @@ import Box from '@mui/material/Box';
 import { usePathname } from 'next/navigation';
 
 // @project
-import { Footer7 } from '@/blocks/footer';
-import { Navbar10 } from '@/blocks/navbar';
-import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
+import { Footer } from '@/blocks/footer';
+import { Navbar, NavbarContent } from '@/blocks/navbar';
 import ThemeProviders from '@/components/ThemeProvider';
 
 // @data
@@ -43,15 +42,15 @@ export default function MainLayout({ children }) {
       <>
         {/* header section */}
         <Box sx={headerWrapperStyles}>
-          <Navbar10 isHomepage={isHomepage}>
-            <NavbarContent10 {...navbar} isHomepage={isHomepage} />
-          </Navbar10>
+          <Navbar isHomepage={isHomepage}>
+            <NavbarContent {...navbar} isHomepage={isHomepage} />
+          </Navbar>
         </Box>
         {/* app/(landing)/* */}
         <main>{children}</main>
 
         {/* footer section */}
-        <Footer7 />
+        <Footer />
       </>
     </ThemeProviders>
   );

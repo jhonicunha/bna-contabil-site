@@ -1,5 +1,5 @@
 // @project
-import { Feature20 } from '@/blocks/feature';
+import { FeatureServices } from '@/blocks/feature';
 
 /***************************  FEATURE 20 - DATA  ***************************/
 
@@ -44,6 +44,7 @@ const data = {
 
 /***************************  BLOCK - FEATURE 20  ***************************/
 
-export default function BlockFeature20() {
-  return <Feature20 {...data} />;
+export default function BlockFeatureServices() {
+  return <FeatureServices {...data} />;
 }
+

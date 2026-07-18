@@ -30,15 +30,17 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
  * - [Clientele3 API](https://docs.soflinc.com.br/ui-kit/development/components/clientele/clientele3#props-details)
  */
 
-export default function Clientele3({ title, clienteleList }) {
+export default function Clientele({ title, clienteleList }) {
   const theme = useTheme();
 
   const settings = {
     autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3500,
+    cssEase: 'linear',
     arrows: false,
     dots: false,
     infinite: true,
-    speed: 500,
     slidesToShow: 5,
     swipeToSlide: true,
     initialSlide: 0,
@@ -49,9 +51,31 @@ export default function Clientele3({ title, clienteleList }) {
       },
       {
         breakpoint: theme.breakpoints.values.sm,
-        settings: { slidesToShow: 2, centerMode: true }
+        settings: { slidesToShow: 2 }
       }
     ]
+  };
+
+  const renderLogo = (item) => {
+    if (item.name) {
+      return (
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: 'text.secondary',
+            fontWeight: 800,
+            letterSpacing: 2,
+            textTransform: 'uppercase',
+            opacity: 0.5,
+            userSelect: 'none',
+            fontSize: { xs: '0.85rem', sm: '0.95rem', md: '1.05rem' }
+          }}
+        >
+          {item.name}
+        </Typography>
+      );
+    }
+    return <GraphicsImage {...item} />;
   };
 
   const shade = {
@@ -103,11 +127,14 @@ export default function Clientele3({ title, clienteleList }) {
                     sx={{
                       px: { xs: 0.25, sm: 0.5, md: 0.75 },
                       '& svg': { opacity: 0.4, transition: ' all 0.5s ease-in-out' },
-                      '&:hover svg': { opacity: 1, transition: ' all 0.5s ease-in-out' }
+                      '&:hover svg': { opacity: 1, transition: ' all 0.5s ease-in-out' },
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center'
                     }}
                   >
                     <Chip
-                      label={<GraphicsImage {...item} />}
+                      label={renderLogo(item)}
                       slotProps={{ label: { sx: { p: 0 } } }}
                       sx={{ bgcolor: 'grey.100', height: { xs: 40, sm: 46, md: 60 }, width: 1 }}
                     />
@@ -122,4 +149,4 @@ export default function Clientele3({ title, clienteleList }) {
   );
 }
 
-Clientele3.propTypes = { title: PropTypes.string, clienteleList: PropTypes.array };
+Clientele.propTypes = { title: PropTypes.string, clienteleList: PropTypes.array };

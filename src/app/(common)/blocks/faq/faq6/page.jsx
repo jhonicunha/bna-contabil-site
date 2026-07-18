@@ -1,6 +1,6 @@
 // @project
 import branding from '@/branding.json';
-import { Faq6 } from '@/blocks/faq';
+import { Faq } from '@/blocks/faq';
 
 /***************************  FAQ 6 - DATA  ***************************/
 
@@ -105,6 +105,7 @@ const data = {
 
 /***************************  FAQ - 6  ***************************/
 
-export default function BlockFaq6() {
-  return <Faq6 {...data} />;
+export default function BlockFaq() {
+  return <Faq {...data} />;
 }
+

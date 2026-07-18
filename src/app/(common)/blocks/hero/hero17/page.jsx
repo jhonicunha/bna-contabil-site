@@ -4,7 +4,7 @@ import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
 
 // @project
-import { Hero17 } from '@/blocks/hero';
+import { Hero } from '@/blocks/hero';
 
 /***************************  HERO 17 - DATA  ***************************/
 
@@ -53,6 +53,7 @@ const data = {
 
 /***************************  BLOCK - HERO 17  ***************************/
 
-export default function BlockHero17() {
-  return <Hero17 {...data} />;
+export default function BlockHero() {
+  return <Hero {...data} />;
 }
+

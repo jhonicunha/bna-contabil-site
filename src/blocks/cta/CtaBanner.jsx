@@ -34,7 +34,7 @@ import Arrow from '@/images/graphics/Arrow';
  * - [CTA4 API](https://docs.soflinc.com.br/ui-kit/development/components/cta/cta4#props-details)
  */
 
-export default function Cta4({ headLine, primaryBtn, profileGroups, list, clientContent }) {
+export default function CtaBanner({ headLine, primaryBtn, profileGroups, list, clientContent }) {
   const transformValues = { xs: 'rotate(45deg)', sm: 'rotate(320deg)', md: 'unset' };
 
   return (
@@ -113,7 +113,7 @@ export default function Cta4({ headLine, primaryBtn, profileGroups, list, client
   );
 }
 
-Cta4.propTypes = {
+CtaBanner.propTypes = {
   headLine: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   primaryBtn: PropTypes.any,
   profileGroups: PropTypes.object,

@@ -24,7 +24,7 @@ import Wave from '@/images/graphics/Wave';
 
 /***************************  HERO - 17  ***************************/
 
-export default function Hero17({ chip, headLine, captionLine, primaryBtn, listData }) {
+export default function Hero({ chip, headLine, captionLine, primaryBtn, listData }) {
   const theme = useTheme();
   const boxRadius = { xs: 24, sm: 32, md: 40 };
 
@@ -138,38 +138,6 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, listDa
 
             {/* Actions & Chips Area */}
             <Stack sx={{ alignItems: 'center', gap: 3.5, mt: { xs: 4, sm: 5, md: 6 } }}>
-              {/* Primary Action Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <ButtonAnimationWrapper>
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="text.primary" />}
-                    {...primaryBtn}
-                    sx={{ 
-                      px: 4, 
-                      py: 1.5, 
-                      fontSize: '1rem', 
-                      fontWeight: 700, 
-                      borderRadius: 2,
-                      bgcolor: 'grey.200',
-                      color: 'grey.900',
-                      boxShadow: '0 4px 12px rgba(255, 255, 255, 0.08)',
-                      '&:hover': {
-                        bgcolor: 'common.white',
-                        color: 'common.black',
-                        boxShadow: '0 6px 18px rgba(255, 255, 255, 0.2)'
-                      }
-                    }}
-                  />
-                </ButtonAnimationWrapper>
-              </motion.div>
-
               {/* Specialities Chips Grid */}
               <Stack direction="row" sx={{ gap: 1.25, flexWrap: 'wrap', justifyContent: 'center', maxWidth: 850 }}>
                 {listData.map((item, index) => (
@@ -201,6 +169,38 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, listDa
                   </motion.div>
                 ))}
               </Stack>
+
+              {/* Primary Action Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <ButtonAnimationWrapper>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    startIcon={<SvgIcon name="tabler-brand-whatsapp" size={18} color="common.white" />}
+                    {...primaryBtn}
+                    sx={{ 
+                      px: 4, 
+                      py: 1.5, 
+                      fontSize: '1rem', 
+                      fontWeight: 700, 
+                      borderRadius: 2,
+                      bgcolor: '#699ac5',
+                      color: 'common.white',
+                      boxShadow: '0 4px 12px rgba(105, 154, 197, 0.25)',
+                      '&:hover': {
+                        bgcolor: '#5084b0',
+                        color: 'common.white',
+                        boxShadow: '0 6px 18px rgba(105, 154, 197, 0.4)'
+                      }
+                    }}
+                  />
+                </ButtonAnimationWrapper>
+              </motion.div>
             </Stack>
           </Box>
         </Box>
@@ -209,7 +209,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, listDa
   );
 }
 
-Hero17.propTypes = {
+Hero.propTypes = {
   chip: PropTypes.object,
   headLine: PropTypes.string,
   captionLine: PropTypes.string,

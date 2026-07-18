@@ -17,7 +17,6 @@ import Typography from '@mui/material/Typography';
 
 // @third-party
 import { motion } from 'motion/react';
-import Slider from 'react-slick';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -41,12 +40,10 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
  * - [FAQ6 API](https://docs.soflinc.com.br/ui-kit/development/components/faq/faq6#props-details)
  */
 
-export default function Faq6({ heading, caption, defaultExpanded, faqList, getInTouch, categories, activeCategory }) {
+export default function Faq({ heading, caption, defaultExpanded, faqList, getInTouch }) {
   const theme = useTheme();
   const isFocusWithin = useFocusWithin();
   const [expanded, setExpanded] = useState(defaultExpanded || false);
-  const [activeTopic, setActiveTopic] = useState(activeCategory || '');
-  const [filterFaqList, setFilterFaqList] = useState(activeCategory ? faqList.filter((item) => item.category === activeCategory) : faqList);
 
   const cardRadius = { xs: 4, sm: 6 };
   const accordionRadius = { xs: cardRadius.xs * 4, sm: cardRadius.sm * 4 };
@@ -55,18 +52,6 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
 
   // Handles the expansion of accordion panels
   const handleChange = (panel) => (event, isExpanded) => setExpanded(isExpanded ? panel : false);
-
-  const slickStyle = { '& .slick-slide': { ' > div': { px: { xs: 0.5, md: 0.75 } } } };
-
-  const settings = {
-    arrows: false,
-    dots: false,
-    infinite: false,
-    speed: 500,
-    swipeToSlide: true,
-    initialSlide: 0,
-    variableWidth: true
-  };
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
@@ -102,55 +87,6 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
           </motion.div>
         )}
         <Stack sx={{ gap: 2 }}>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.4
-            }}
-          >
-            <Stack sx={slickStyle}>
-              <Slider {...settings}>
-                <Button
-                  sx={{
-                    minHeight: { xs: 40, sm: 48 },
-                    color: 'text.primary',
-                    borderColor: 'divider',
-                    bgcolor: activeTopic === '' ? 'grey.100' : 'inherit',
-                    '&.MuiButton-root:hover': { bgcolor: 'grey.100', borderColor: 'divider' }
-                  }}
-                  variant="outlined"
-                  onClick={() => {
-                    setActiveTopic('');
-                    setFilterFaqList(faqList);
-                  }}
-                >
-                  All
-                </Button>
-                {categories.map((item, index) => (
-                  <Button
-                    key={index}
-                    sx={{
-                      minHeight: { xs: 40, sm: 48 },
-                      color: 'text.primary',
-                      borderColor: 'divider',
-                      bgcolor: activeTopic === item ? 'grey.100' : 'inherit',
-                      '&.MuiButton-root:hover': { bgcolor: 'grey.100', borderColor: 'divider' }
-                    }}
-                    variant="outlined"
-                    onClick={() => {
-                      setActiveTopic(item);
-                      setFilterFaqList(faqList.filter((list) => list.category === item));
-                    }}
-                  >
-                    {item}
-                  </Button>
-                ))}
-              </Slider>
-            </Stack>
-          </motion.div>
           <Stack
             sx={{
               gap: 1.5,
@@ -158,7 +94,7 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
               '& .MuiAccordion-root:last-of-type': { borderBottomLeftRadius: accordionRadius, borderBottomRightRadius: accordionRadius }
             }}
           >
-            {filterFaqList.map((item, index) => (
+            {faqList.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ y: 20, opacity: 0 }}
@@ -200,12 +136,10 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
   );
 }
 
-Faq6.propTypes = {
+Faq.propTypes = {
   heading: PropTypes.any,
   caption: PropTypes.any,
   defaultExpanded: PropTypes.any,
   faqList: PropTypes.any,
-  getInTouch: PropTypes.any,
-  categories: PropTypes.array,
-  activeCategory: PropTypes.string
+  getInTouch: PropTypes.any
 };

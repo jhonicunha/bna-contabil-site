@@ -30,7 +30,7 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
  * - [Testimonial10 API](https://docs.soflinc.com.br/ui-kit/development/components/testimonial/testimonial10#props-details)
  */
 
-export default function Testimonial10({ heading, caption, testimonials }) {
+export default function Testimonial({ heading, caption, testimonials }) {
   const theme = useTheme();
 
   const gc = theme.vars.palette.background.default;
@@ -79,4 +79,4 @@ export default function Testimonial10({ heading, caption, testimonials }) {
   );
 }
 
-Testimonial10.propTypes = { heading: PropTypes.any, caption: PropTypes.any, testimonials: PropTypes.any };
+Testimonial.propTypes = { heading: PropTypes.any, caption: PropTypes.any, testimonials: PropTypes.any };

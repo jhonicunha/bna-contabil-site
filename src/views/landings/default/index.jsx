@@ -2,8 +2,8 @@
 
 // @project
 import { AboutSummary } from '@/blocks/about';
-import { Feature20 } from '@/blocks/feature';
-import { Hero17 } from '@/blocks/hero';
+import { FeatureServices } from '@/blocks/feature';
+import { Hero } from '@/blocks/hero';
 import LazySection from '@/components/LazySection';
 
 // @data
@@ -11,14 +11,13 @@ import {
   aboutSummary,
   metrics,
   clientele,
-  cta4,
-  cta5,
+  ctaBanner,
+  ctaContact,
+  ctaSimple,
   faq,
-  feature20,
-  feature21,
-  feature18,
+  featureServices,
+  featureWhyUs,
   hero,
-  other,
   testimonial
 } from './data';
 
@@ -28,39 +27,38 @@ export default function Main() {
 
   return (
     <>
-      <Hero17 {...hero} />
-      <Feature20 {...feature20} />
+      <Hero {...hero} />
+      <FeatureServices {...featureServices} />
       <AboutSummary {...aboutSummary} />
 
       <LazySection
         sections={[
-          { importFunc: () => import('@/blocks/metrics').then((module) => ({ default: module.Metrics5 })), props: metrics },
-          { importFunc: () => import('@/blocks/other').then((module) => ({ default: module.Other1 })), props: other }
+          { importFunc: () => import('@/blocks/feature').then((module) => ({ default: module.FeatureWhyUs })), props: featureWhyUs }
         ]}
         offset="200px"
       />
 
       <LazySection
         sections={[
-          { importFunc: () => import('@/blocks/feature').then((module) => ({ default: module.Feature18 })), props: feature18 },
-          { importFunc: () => import('@/blocks/feature').then((module) => ({ default: module.Feature21 })), props: feature21 },
-          { importFunc: () => import('@/blocks/cta').then((module) => ({ default: module.Cta4 })), props: cta4 }
+          { importFunc: () => import('@/blocks/metrics').then((module) => ({ default: module.Metrics })), props: metrics },
+          { importFunc: () => import('@/blocks/cta').then((module) => ({ default: module.CtaBanner })), props: ctaBanner }
         ]}
         offset="200px"
       />
 
       <LazySection
         sections={[
-          { importFunc: () => import('@/blocks/testimonial').then((module) => ({ default: module.Testimonial10 })), props: testimonial },
-          { importFunc: () => import('@/blocks/clientele').then((module) => ({ default: module.Clientele3 })), props: clientele }
+          { importFunc: () => import('@/blocks/testimonial').then((module) => ({ default: module.Testimonial })), props: testimonial },
+          { importFunc: () => import('@/blocks/clientele').then((module) => ({ default: module.Clientele })), props: clientele }
         ]}
         offset="200px"
       />
 
       <LazySection
         sections={[
-          { importFunc: () => import('@/blocks/cta').then((module) => ({ default: module.Cta5 })), props: cta5 },
-          { importFunc: () => import('@/blocks/faq').then((module) => ({ default: module.Faq6 })), props: faq }
+          { importFunc: () => import('@/blocks/cta').then((module) => ({ default: module.CtaContact })), props: ctaContact },
+          { importFunc: () => import('@/blocks/faq').then((module) => ({ default: module.Faq })), props: faq },
+          { importFunc: () => import('@/blocks/cta').then((module) => ({ default: module.CtaSimple })), props: ctaSimple }
         ]}
         offset="200px"
       />

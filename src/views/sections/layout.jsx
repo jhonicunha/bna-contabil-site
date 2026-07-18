@@ -5,8 +5,7 @@ import Box from '@mui/material/Box';
 
 // @project
 import { navbar } from '../landings/default/data';
-import { Navbar10 } from '@/blocks/navbar';
-import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
+import { Navbar, NavbarContent } from '@/blocks/navbar';
 
 /***************************  LANDING - SECTIONS  ***************************/
 
@@ -14,9 +13,9 @@ export default function SectionsLayout({ children }) {
   return (
     <>
       <Box sx={{ bgcolor: 'grey.100' }}>
-        <Navbar10>
-          <NavbarContent10 {...navbar} />
-        </Navbar10>
+        <Navbar>
+          <NavbarContent {...navbar} />
+        </Navbar>
       </Box>
       {children}
     </>

@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 // @project
 import branding from '@/branding.json';
-import { Cta4 } from '@/blocks/cta';
+import { CtaBanner } from '@/blocks/cta';
 
 /***************************  CALL TO ACTION 4 - HEADLINE  ***************************/
 
@@ -40,6 +40,7 @@ const data = {
 
 /***************************  BLOCK - CALL TO ACTION 4  ***************************/
 
-export default function BlockCta4() {
-  return <Cta4 {...data} />;
+export default function BlockCtaBanner() {
+  return <CtaBanner {...data} />;
 }
+

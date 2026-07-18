@@ -41,7 +41,7 @@ function AnimatedCounter({ startCount, endCount }) {
  * - [Metrics5 API](https://docs.soflinc.com.br/ui-kit/development/components/metrics/metrics5#props-details)
  */
 
-export default function Metrics5({ heading, caption, blockDetail }) {
+export default function Metrics({ heading, caption, blockDetail }) {
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
@@ -96,4 +96,4 @@ export default function Metrics5({ heading, caption, blockDetail }) {
 
 AnimatedCounter.propTypes = { startCount: PropTypes.number, endCount: PropTypes.number };
 
-Metrics5.propTypes = { heading: PropTypes.any, caption: PropTypes.any, blockDetail: PropTypes.any };
+Metrics.propTypes = { heading: PropTypes.any, caption: PropTypes.any, blockDetail: PropTypes.any };

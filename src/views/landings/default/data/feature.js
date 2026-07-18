@@ -69,7 +69,7 @@ export const feature5 = {
   actionBtn: { children: 'Ver Vagas Disponíveis', href: '#' }
 };
 
-export const feature20 = {
+export const featureServices = {
   heading: 'Como Podemos te Ajudar?',
   features: [
     {
@@ -105,15 +105,10 @@ export const feature20 = {
   ]
 };
 
-export const feature21 = {
+export const featureStats = {
   heading: `Por que escolher a ${branding.brandName}?`,
   caption: 'Unimos o rigor da advocacia tributária e a inteligência analítica contábil sob uma única estrutura corporativa sinérgica.',
   image: '/assets/images/graphics/ai/desktop1-light.svg',
-  primaryBtn: { children: 'Falar no WhatsApp', href: 'https://wa.me/5541999775191', ...linkProps },
-  secondaryBtn: {
-    children: 'Sobre Nós',
-    href: '/quem-somos'
-  },
   features: [
     {
       animationDelay: 0.1,
@@ -192,8 +187,8 @@ export const feature23 = {
   ]
 };
 
-export const feature18 = {
-  heading: 'Especialidades de Alta Performance',
+export const featureWhyUs = {
+  heading: 'Nossas Especialidades',
   caption: 'Conectamos inteligência de dados a soluções práticas e seguras para alavancar a rentabilidade do seu negócio.',
   topics: [
     {
@@ -201,42 +196,39 @@ export const feature18 = {
       title: 'Recuperação de Créditos',
       title2: 'Recupere o Fluxo de Caixa Perdido',
       description: 'Nossa auditoria digital mapeia inconsistências e créditos acumulados de impostos (PIS/COFINS, ICMS e IPI) prontos para compensação administrativa imediata.',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
+      image: '/assets/images/graphics/default/recuperacao-creditos.jpg',
       list: [
         { primary: 'Auditoria eletrônica automatizada dos últimos 60 meses' },
         { primary: 'Créditos monofásicos e exclusão do ICMS na base de cálculo' },
         { primary: 'Processo 100% administrativo, rápido e seguro' },
         { primary: 'Estrita conformidade com as regras da Receita Federal' }
-      ],
-      actionBtn: { children: 'Falar com Especialista', href: 'https://wa.me/5541999775191', ...linkProps }
+      ]
     },
     {
       icon: 'tabler-file-analytics',
       title: 'Planejamento Fiscal',
       title2: 'Redução Legal da Carga Tributária',
       description: 'Modelamos cenários operacionais complexos para estruturar a alternativa legal de menor imposto possível para sua empresa.',
-      image: '/assets/images/graphics/default/admin-dashboard-2.png',
+      image: '/assets/images/graphics/default/planejamento-fiscal.jpg',
       list: [
         { primary: 'Transição estratégica entre regimes (Lucro Real vs. Presumido)' },
         { primary: 'Aproveitamento de incentivos e benefícios fiscais estaduais' },
         { primary: 'Planejamento tributário logístico e de e-commerce' },
         { primary: 'Prevenção contra contingências e multas fiscais' }
-      ],
-      actionBtn: { children: 'Avaliar Regime Tributário', href: 'https://wa.me/5541999775191', ...linkProps }
+      ]
     },
     {
       icon: 'tabler-shield',
       title: 'Gestão de Passivos e Defesas',
       title2: 'Segurança Jurídica e Defesas Técnicas',
       description: 'Aproveitamos a ampla bagagem jurídica da BNA para redigir defesas administrativas robustas e atuar na blindagem e prevenção de riscos dos sócios.',
-      image: '/assets/images/graphics/default/admin-dashboard-3.png',
+      image: '/assets/images/graphics/default/gestao-passivos.jpg',
       list: [
         { primary: 'Elaboração de impugnações e defesas fiscais de alto nível' },
         { primary: 'Acompanhamento de fiscalizações municipais, estaduais e federais' },
         { primary: 'Consultoria preventiva e blindagem patrimonial de sócios' },
         { primary: 'Estruturação de parcelamentos especiais e CND' }
-      ],
-      actionBtn: { children: 'Proteger Minha Empresa', href: 'https://wa.me/5541999775191', ...linkProps }
+      ]
     }
   ]
 };

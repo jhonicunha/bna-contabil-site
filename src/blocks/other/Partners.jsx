@@ -44,7 +44,7 @@ import Wave from '@/images/graphics/Wave';
  * - [Other1 API](https://docs.soflinc.com.br/ui-kit/development/components/other/other1#props-details)
  */
 
-export default function Other1({ heading, description, primaryBtn, sections }) {
+export default function Partners({ heading, description, primaryBtn, sections }) {
   const theme = useTheme();
   const isFocusWithin = useFocusWithin();
 
@@ -178,4 +178,4 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
   );
 }
 
-Other1.propTypes = { heading: PropTypes.string, description: PropTypes.string, primaryBtn: PropTypes.any, sections: PropTypes.array };
+Partners.propTypes = { heading: PropTypes.string, description: PropTypes.string, primaryBtn: PropTypes.any, sections: PropTypes.array };

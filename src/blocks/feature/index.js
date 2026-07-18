@@ -1,3 +1,4 @@
-export { default as Feature18 } from './Feature18';
-export { default as Feature20 } from './Feature20';
-export { default as Feature21 } from './Feature21';
+export { default as FeatureWhyUs } from './FeatureWhyUs';
+export { default as FeatureServices } from './FeatureServices';
+export { default as FeatureStats } from './FeatureStats';
+

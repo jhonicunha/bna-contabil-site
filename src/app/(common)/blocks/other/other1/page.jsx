@@ -1,5 +1,5 @@
 // @project
-import Other1 from '@/blocks/other/Other1';
+import Partners from '@/blocks/other/Partners';
 import { PAGE_PATH, SECTION_PATH } from '@/path';
 
 // @asssets
@@ -53,6 +53,7 @@ const data = {
 
 /***************************  BLOCK - OTHER 1  ***************************/
 
-export default function BlockOther1() {
-  return <Other1 {...data} />;
+export default function BlockPartners() {
+  return <Partners {...data} />;
 }
+

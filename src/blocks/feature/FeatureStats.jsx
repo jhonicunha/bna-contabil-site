@@ -30,7 +30,7 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
  * - [Feature21 API](https://docs.soflinc.com.br/ui-kit/development/components/feature/feature21#props-details)
  */
 
-export default function Feature21({ heading, caption, image, features, primaryBtn, secondaryBtn }) {
+export default function FeatureStats({ heading, caption, image, features, primaryBtn, secondaryBtn }) {
   const imagePadding = { xs: 3, sm: 4, md: 5 };
   const iconProps = { color: 'text.primary', stroke: 1 };
 
@@ -143,7 +143,7 @@ export default function Feature21({ heading, caption, image, features, primaryBt
   );
 }
 
-Feature21.propTypes = {
+FeatureStats.propTypes = {
   heading: PropTypes.string,
   caption: PropTypes.string,
   image: PropTypes.any,

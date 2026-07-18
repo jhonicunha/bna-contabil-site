@@ -2,11 +2,11 @@
 
 // @project
 import { ContactUs4 } from '@/blocks/contact-us';
-import { Cta5 } from '@/blocks/cta';
+import { CtaContact } from '@/blocks/cta';
 import SectionHero from '@/components/SectionHero';
 
 // @data
-import { contactUS, cta5 } from './data';
+import { contactUS, ctaContact } from './data';
 
 const breadcrumbs = [
   { title: 'Início', to: '/' },
@@ -18,7 +18,7 @@ export default function Contato() {
     <>
       <SectionHero heading="Entre em Contato" breadcrumbs={breadcrumbs} search={false} />
       <ContactUs4 {...contactUS} />
-      <Cta5 {...cta5} />
+      <CtaContact {...ctaContact} />
     </>
   );
 }

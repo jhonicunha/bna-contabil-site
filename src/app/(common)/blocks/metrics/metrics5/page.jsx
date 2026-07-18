@@ -1,6 +1,6 @@
 // @project
 import branding from '@/branding.json';
-import { Metrics5 } from '@/blocks/metrics';
+import { Metrics } from '@/blocks/metrics';
 
 /***************************  BENEFIT 5 - DATA  ***************************/
 
@@ -17,6 +17,7 @@ const data = {
 
 /***************************  BLOCK - METRICS 5  ***************************/
 
-export default function BlockMetrics5() {
-  return <Metrics5 {...data} />;
+export default function BlockMetrics() {
+  return <Metrics {...data} />;
 }
+

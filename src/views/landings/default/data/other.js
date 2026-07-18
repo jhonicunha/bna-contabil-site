@@ -1,4 +1,4 @@
-export const other = {
+export const partners = {
   heading: 'Sócios Fundadores',
   description: 'Profissionais altamente qualificados liderando a inteligência fiscal, societária e contábil da sua empresa.',
   primaryBtn: { 
@@ -32,7 +32,7 @@ export const other = {
   ]
 };
 
-export const other3 = {
+export const careers = {
   heading: 'Junte-se à nossa equipe',
   caption: 'Faça parte de um time dedicado a entregar excelência técnica e resultados financeiros reais aos nossos clientes.',
   other: [

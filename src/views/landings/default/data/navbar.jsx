@@ -46,6 +46,7 @@ export const navbar = {
     { id: 'inicio', title: 'Início', link: '/' },
     { id: 'quem-somos', title: 'Quem Somos', link: '/quem-somos' },
     { id: 'servicos', title: 'Serviços', link: '/servicos' },
+    { id: 'blog', title: 'Blog', link: '/blog' },
     { id: 'contato', title: 'Contato', link: '/contato' }
   ]
 };

@@ -1,2 +1,5 @@
-export { default as Cta4 } from './Cta4';
-export { default as Cta5 } from './Cta5';
+export { default as CtaBanner } from './CtaBanner';
+export { default as CtaContact } from './CtaContact';
+export { default as CtaSimple } from './CtaSimple';
+
+

@@ -39,7 +39,7 @@ import GraphicsImage from '@/components/GraphicsImage';
  * - [Feature18 API](https://docs.soflinc.com.br/ui-kit/development/components/feature/feature18#props-details)
  */
 
-export default function Feature18({ heading, caption, topics }) {
+export default function FeatureWhyUs({ heading, caption, topics }) {
   const boxPadding = { xs: 3, md: 5 };
   const imagePadding = { xs: 3, sm: 4, md: 5 };
 
@@ -97,14 +97,18 @@ export default function Feature18({ heading, caption, topics }) {
                         borderColor: 'transparent',
                         '& svg ': { mr: 1 },
                         '&.Mui-selected': {
-                          bgcolor: 'grey.200',
-                          borderColor: 'grey.400',
+                          bgcolor: 'primary.main',
+                          borderColor: 'primary.dark',
                           minWidth: { xs: 112, md: 160, sm: 156 },
-                          color: 'text.primary',
-                          '& svg': { stroke: 'text.primary' }
+                          color: 'common.white',
+                          '& svg': { stroke: '#ffffff', color: '#ffffff' }
                         },
-                        '&.Mui-focusVisible': { bgcolor: 'grey.300' },
-                        '&:hover': { bgcolor: 'grey.200' }
+                        '&.Mui-focusVisible': { bgcolor: 'rgba(27, 83, 133, 0.25)' },
+                        '&:hover': { 
+                          bgcolor: 'rgba(27, 83, 133, 0.15)',
+                          color: 'primary.main',
+                          '& svg': { color: 'primary.main', stroke: 'rgba(27, 83, 133, 1)' }
+                        }
                       }}
                     />
                   ))}
@@ -265,4 +269,4 @@ export default function Feature18({ heading, caption, topics }) {
   );
 }
 
-Feature18.propTypes = { heading: PropTypes.string, caption: PropTypes.string, topics: PropTypes.array };
+FeatureWhyUs.propTypes = { heading: PropTypes.string, caption: PropTypes.string, topics: PropTypes.array };

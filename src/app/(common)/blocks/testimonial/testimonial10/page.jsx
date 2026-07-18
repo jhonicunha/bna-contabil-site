@@ -1,5 +1,5 @@
 // @project
-import { Testimonial10 } from '@/blocks/testimonial';
+import { Testimonial } from '@/blocks/testimonial';
 
 /***************************  TESTIMONIAL 10 - DATA  ***************************/
 
@@ -66,6 +66,7 @@ const data = {
 
 /***************************  BLOCK - TESTIMONIAL 10  ***************************/
 
-export default function BlockTestimonial10() {
-  return <Testimonial10 {...data} />;
+export default function BlockTestimonial() {
+  return <Testimonial {...data} />;
 }
+

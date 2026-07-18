@@ -90,33 +90,71 @@ export default function SectionHero({ heading, search = false, offer = false, br
   return (
     <Box
       sx={{
+        position: 'relative',
         overflow: 'hidden',
-        py: { xs: 3, sm: 5, md: 8 },
-        bgcolor: 'grey.100',
         borderBottomLeftRadius: boxRadius,
         borderBottomRightRadius: boxRadius,
-        ...getBackgroundDots(theme.vars.palette.grey[300])
+        bgcolor: '#121212',
+        pt: { xs: 12, sm: 14, md: 16 },
+        pb: { xs: 4, sm: 5, md: 6 }
       }}
     >
-      <ContainerWrapper>
+      {/* Blurred background image */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: 1,
+          height: 1,
+          zIndex: 1,
+          backgroundImage: 'url(/assets/images/hero-bg.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'blur(3px)',
+          transform: 'scale(1.05)'
+        }}
+      />
+      {/* Blue gradient overlay */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: 1,
+          height: 1,
+          zIndex: 2,
+          background: 'linear-gradient(180deg, rgba(27, 83, 133, 0.75) 0%, rgba(15, 23, 30, 0.90) 100%)'
+        }}
+      />
+
+      <ContainerWrapper sx={{ position: 'relative', zIndex: 3 }}>
         <Stack sx={{ alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
           {breadcrumbs && (
             <Chip
               variant="outlined"
               label={
                 <Breadcrumbs
-                  separator={<SvgIcon name={'tabler-chevron-right'} size={16} color="text.primary" />}
+                  separator={<SvgIcon name={'tabler-chevron-right'} size={14} color="grey.400" />}
                   rel="noopener noreferrer"
                   aria-label="main-breadcrumb"
-                  sx={{ '& .MuiBreadcrumbs-separator': { mx: 0.5 } }}
+                  sx={{ 
+                    '& .MuiBreadcrumbs-separator': { mx: 0.5 },
+                    '& .MuiBreadcrumbs-li': { display: 'flex', alignItems: 'center' }
+                  }}
                 >
                   {breadcrumbs?.map((item, index) => (
                     <Link
                       component={NextLink}
                       key={index}
                       variant="caption"
-                      color={breadcrumbs.length - 1 !== index ? 'inherit' : 'primary.main'}
+                      color={breadcrumbs.length - 1 !== index ? 'grey.300' : 'common.white'}
                       href={item.to && breadcrumbs.length - 1 !== index ? item.to : ''}
+                      sx={{ 
+                        textDecoration: 'none', 
+                        fontWeight: breadcrumbs.length - 1 !== index ? 500 : 700,
+                        '&:hover': { color: 'common.white', textDecoration: 'underline' } 
+                      }}
                     >
                       {item.title}
                     </Link>
@@ -124,7 +162,7 @@ export default function SectionHero({ heading, search = false, offer = false, br
                 </Breadcrumbs>
               }
               slotProps={{ label: { sx: { py: 0.5, px: 1.5 } } }}
-              sx={{ bgcolor: 'grey.100' }}
+              sx={{ bgcolor: 'rgba(255, 255, 255, 0.05)', borderColor: 'rgba(255, 255, 255, 0.12)' }}
             />
           )}
           {offer && (
@@ -132,7 +170,7 @@ export default function SectionHero({ heading, search = false, offer = false, br
               variant="outlined"
               label={
                 <>
-                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+                  <Typography variant="caption" sx={{ color: 'grey.300' }}>
                     Over 200+
                   </Typography>
                   <Chip
@@ -153,13 +191,13 @@ export default function SectionHero({ heading, search = false, offer = false, br
                 </>
               }
               slotProps={{ label: { sx: { py: 0.5, px: 1.5 } } }}
-              sx={{ bgcolor: 'grey.100' }}
+              sx={{ bgcolor: 'rgba(255, 255, 255, 0.05)', borderColor: 'rgba(255, 255, 255, 0.12)' }}
             />
           )}
-          <Typography variant="h1" sx={{ textAlign: 'center', width: { xs: 345, sm: 550, md: 700 } }}>
+          <Typography variant="h1" sx={{ textAlign: 'center', color: 'common.white', fontWeight: 800, width: { xs: 345, sm: 550, md: 700 } }}>
             {heading}
           </Typography>
-          <Box sx={{ py: { xs: 0.575, md: 0.875 } }}>
+          <Box sx={{ py: { xs: 0.5, md: 0.75 } }}>
             <Wave />
           </Box>
           {search && (

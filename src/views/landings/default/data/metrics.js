@@ -1,5 +1,5 @@
 export const metrics = {
-  heading: 'Nossos Números de Impacto',
+  heading: 'Nossos Números',
   caption: 'Experiência consolidada e resultados comprovados em gerar caixa e economia tributária de forma segura para nossos parceiros.',
   blockDetail: [
     { animationDelay: 0.1, counter: 20, defaultUnit: '+ Anos', caption: 'De Experiência Combinada' },

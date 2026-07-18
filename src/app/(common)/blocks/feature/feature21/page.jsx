@@ -1,6 +1,6 @@
 // @project
 import branding from '@/branding.json';
-import { Feature21 } from '@/blocks/feature';
+import { FeatureStats } from '@/blocks/feature';
 
 /***************************  FEATURE 21 - DATA  ***************************/
 
@@ -48,6 +48,7 @@ const data = {
 
 /***************************  BLOCK - FEATURE 21  ***************************/
 
-export default function BlockFeature21() {
-  return <Feature21 {...data} />;
+export default function BlockFeatureStats() {
+  return <FeatureStats {...data} />;
 }
+

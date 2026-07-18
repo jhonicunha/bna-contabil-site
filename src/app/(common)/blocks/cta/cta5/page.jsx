@@ -1,6 +1,6 @@
 // @project
 import branding from '@/branding.json';
-import { Cta5 } from '@/blocks/cta';
+import { CtaContact } from '@/blocks/cta';
 
 /***************************  CALL TO ACTION 5 - DATA  ***************************/
 
@@ -27,6 +27,7 @@ const data = {
 
 /***************************  BLOCK - CALL TO ACTION 5  ***************************/
 
-export default function BlockCta5() {
-  return <Cta5 {...data} />;
+export default function BlockCtaContact() {
+  return <CtaContact {...data} />;
 }
+

@@ -10,22 +10,22 @@ import Toolbar from '@mui/material/Toolbar';
 import ElevationScroll from './ElevationScroll';
 import ContainerWrapper from '@/components/ContainerWrapper';
 
-export const navbar10Height = { xs: 64, sm: 72, md: 84 };
+export const navbarHeight = { xs: 64, sm: 72, md: 84 };
 
 // override media queries injected by theme.mixins.toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   '@media all': {
-    minHeight: navbar10Height.md,
+    minHeight: navbarHeight.md,
     paddingLeft: 0,
     paddingRight: 0
   },
   paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(2),
   [theme.breakpoints.down('md')]: {
-    '@media all': { minHeight: navbar10Height.sm }
+    '@media all': { minHeight: navbarHeight.sm }
   },
   [theme.breakpoints.down('sm')]: {
-    '@media all': { minHeight: navbar10Height.xs },
+    '@media all': { minHeight: navbarHeight.xs },
     paddingTop: theme.spacing(1.5),
     paddingBottom: theme.spacing(1.5)
   }
@@ -42,12 +42,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
  * - [Navbar10 API](https://docs.soflinc.com.br/ui-kit/development/components/navbar/navbar10#props-details)
  */
 
-export default function Navbar10({ children, isFixed = true, isHomepage = false, ...props }) {
+export default function Navbar({ children, isFixed = true, isHomepage = false, ...props }) {
   const triggerSX = isHomepage
     ? {
-        bgcolor: 'rgba(25, 25, 25, 0.75)',
+        bgcolor: 'rgba(27, 83, 133, 0.85)',
         backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+        borderBottom: '1px solid rgba(255, 255, 255, 0.10)'
       }
     : undefined;
 
@@ -65,4 +65,4 @@ export default function Navbar10({ children, isFixed = true, isHomepage = false,
   );
 }
 
-Navbar10.propTypes = { children: PropTypes.any, isFixed: PropTypes.bool, props: PropTypes.any };
+Navbar.propTypes = { children: PropTypes.any, isFixed: PropTypes.bool, props: PropTypes.any };

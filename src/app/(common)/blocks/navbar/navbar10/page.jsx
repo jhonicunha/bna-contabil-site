@@ -1,7 +1,7 @@
 // @project
 import { Other2 } from '@/blocks/other';
-import { Navbar10 } from '@/blocks/navbar';
-import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
+import { Navbar } from '@/blocks/navbar';
+import { NavbarContent } from '@/blocks/navbar/navbar-content';
 import { MegaMenuType } from '@/enum';
 
 /***************************  NAVBAR 10 - DATA  ***************************/
@@ -54,13 +54,14 @@ const navbar = {
 
 /***************************  BLOCK - NAVBAR 10  ***************************/
 
-export default function BlockNavbar10() {
+export default function BlockNavbar() {
   return (
     <>
-      <Navbar10>
-        <NavbarContent10 {...navbar} />
-      </Navbar10>
+      <Navbar>
+        <NavbarContent {...navbar} />
+      </Navbar>
       <Other2 />
     </>
   );
 }
+
