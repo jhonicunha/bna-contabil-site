@@ -11,7 +11,16 @@ const ogCommonMetadata = {
   locale: 'pt_BR',
   type: 'website',
   siteName: `${branding.brandName}`,
-  images: '/assets/images/metadata/og.jpg' // recommended dimensions of 1200x630
+  images: [
+    {
+      url: 'https://bnacontabil.com.br/assets/images/metadata/og.jpg',
+      secureUrl: 'https://bnacontabil.com.br/assets/images/metadata/og.jpg',
+      width: 1200,
+      height: 630,
+      alt: `${branding.brandName} - Inteligência Fiscal e Contabilidade Tributária`,
+      type: 'image/jpeg'
+    }
+  ]
 };
 
 export const mainMetadata = {
@@ -34,15 +43,21 @@ export const mainMetadata = {
     'Curitiba Contabilidade'
   ],
   creator: `${branding.company.name}`,
-  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || 'https://bnacontabil.com.br'),
   alternates: {
     canonical: '/'
   },
   openGraph: {
     title,
     description,
-    url: '/',
+    url: 'https://bnacontabil.com.br',
     ...ogCommonMetadata
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: ['https://bnacontabil.com.br/assets/images/metadata/og.jpg']
   }
 };
 
