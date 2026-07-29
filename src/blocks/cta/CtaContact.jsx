@@ -97,7 +97,7 @@ export default function CtaContact({ heading, caption, label }) {
 
                 {/* Google Map pointing to the Visconde de Guarapuava address */}
                 <Stack sx={{ gap: 1.5 }}>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Typography component="div" variant="body2" sx={{ color: 'text.secondary', display: 'flex', alignItems: 'center', gap: 1 }}>
                     <SvgIcon name="tabler-map-pin" size={18} color="#00b4d8" />
                     Av. Visconde de Guarapuava, 4628 Sala 709 - Batel, Curitiba/PR
                   </Typography>
