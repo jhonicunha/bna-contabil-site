@@ -101,24 +101,52 @@ export default function CtaContact({ heading, caption, label }) {
                     <SvgIcon name="tabler-map-pin" size={18} color="#00b4d8" />
                     Av. Visconde de Guarapuava, 4628 Sala 709 - Batel, Curitiba/PR
                   </Typography>
+                  {/* Map Graphic Container */}
                   <Box
                     sx={{
                       width: '100%',
-                      height: { xs: 200, sm: 220 },
+                      height: { xs: 220, sm: 240 },
                       borderRadius: 3,
                       overflow: 'hidden',
                       border: '1px solid',
-                      borderColor: 'grey.200'
+                      borderColor: 'grey.300',
+                      position: 'relative',
+                      backgroundImage: 'url(/assets/images/map_curitiba.jpg)',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
                     }}
                   >
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4839556209867!2d-49.2783637246473!3d-25.45330917753641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce79a32c4a9fb%3A0x6b4028d7b3a0e50f!2sAv.%20Visc.%20de%20Guarapuava%2C%204628%20-%20Batel%2C%20Curitiba%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1722283000000!5m2!1spt-BR!2sbr"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen=""
-                      loading="lazy"
-                    />
+                    {/* Google Maps Full Address Button */}
+                    <Button
+                      variant="contained"
+                      size="small"
+                      href="https://www.google.com/maps/search/?api=1&query=Av.+Visconde+de+Guarapuava,+4628+-+Batel,+Curitiba+-+PR,+80240-010"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={<SvgIcon name="tabler-map-pin" size={16} color="common.white" />}
+                      sx={{
+                        position: 'absolute',
+                        bottom: 12,
+                        right: 12,
+                        bgcolor: 'rgba(18, 18, 18, 0.85)',
+                        backdropFilter: 'blur(8px)',
+                        color: '#fff',
+                        fontSize: '0.8125rem',
+                        fontWeight: 600,
+                        py: 0.75,
+                        px: 2,
+                        borderRadius: 50,
+                        textTransform: 'none',
+                        border: '1px solid rgba(255, 255, 255, 0.15)',
+                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
+                        '&:hover': {
+                          bgcolor: '#00b4d8',
+                          borderColor: '#00b4d8'
+                        }
+                      }}
+                    >
+                      Abrir no Google Maps
+                    </Button>
                   </Box>
                 </Stack>
               </Stack>
