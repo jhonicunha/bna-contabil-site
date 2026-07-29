@@ -54,7 +54,7 @@ export const faq = {
     }
   ],
   getInTouch: {
-    link: { children: 'Falar com um Consultor', href: 'https://wa.me/5541999775191', target: '_blank', rel: 'noopener noreferrer' }
+    link: { children: 'Falar com um Consultor', href: 'https://wa.me/5541998910163', target: '_blank', rel: 'noopener noreferrer' }
   },
   categories: ['Geral', 'Serviços Fiscais', 'Créditos Fiscais'],
   activeCategory: 'Geral'

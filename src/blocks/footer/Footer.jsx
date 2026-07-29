@@ -64,8 +64,8 @@ const iconProps = { color: 'text.secondary' };
 const usefullLinks = [
   {
     icon: <SvgIcon name="tabler-phone" {...iconProps} />,
-    title: '+55 41 99977-5191',
-    href: 'tel:5541999775191'
+    title: '+55 41 99891-0163',
+    href: 'tel:5541998910163'
   },
   {
     icon: <SvgIcon name="tabler-mail" {...iconProps} />,

@@ -3,7 +3,7 @@ export const partners = {
   description: 'Profissionais altamente qualificados liderando a inteligência fiscal, societária e contábil da sua empresa.',
   primaryBtn: { 
     children: 'Falar com um Especialista', 
-    href: 'https://wa.me/5541999775191',
+    href: 'https://wa.me/5541998910163',
     target: '_blank',
     rel: 'noopener noreferrer'
   },

@@ -25,7 +25,7 @@ export const hero = {
   captionLine: 'Unimos a solidez jurídica da BNA Consultoria à precisão contábil para gerar caixa, reduzir impostos legalmente e proteger o patrimônio da sua empresa.',
   primaryBtn: { 
     children: 'Falar com um Especialista', 
-    href: 'https://wa.me/5541999775191',
+    href: 'https://wa.me/5541998910163',
     target: '_blank', 
     rel: 'noopener noreferrer'
   },

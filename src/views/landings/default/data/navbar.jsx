@@ -29,7 +29,7 @@ export const navbar = {
   },
   primaryBtn: { 
     children: 'Falar no WhatsApp', 
-    href: 'https://wa.me/5541999775191', 
+    href: 'https://wa.me/5541998910163', 
     ...linkProps,
     sx: {
       borderRadius: 2,

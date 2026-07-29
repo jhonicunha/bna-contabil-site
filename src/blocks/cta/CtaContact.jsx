@@ -78,11 +78,11 @@ export default function CtaContact({ heading, caption, label }) {
                     variant="contained"
                     color="primary"
                     startIcon={<SvgIcon name="tabler-brand-whatsapp" size={18} color="common.white" />}
-                    href="https://wa.me/5541999775191"
+                    href="https://wa.me/5541998910163"
                     target="_blank"
                     sx={{ py: 1.25, borderRadius: 2, textTransform: 'none', fontWeight: 600 }}
                   >
-                    (41) 99977-5191
+                    (41) 99891-0163
                   </Button>
                   <Button
                     variant="contained"

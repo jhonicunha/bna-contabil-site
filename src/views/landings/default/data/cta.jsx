@@ -2,7 +2,7 @@ export const ctaBanner = {
   headLine: 'Por que escolher a BNA Contábil?',
   primaryBtn: {
     children: 'Falar com um Especialista',
-    href: 'https://wa.me/5541999775191',
+    href: 'https://wa.me/5541998910163',
     target: '_blank'
   },
   profileGroups: {
@@ -50,7 +50,7 @@ export const ctaSimple = {
   caption: 'Fale com os nossos especialistas e descubra como gerar caixa com total segurança fiscal.',
   primaryBtn: {
     children: 'Falar com um Especialista',
-    href: 'https://wa.me/5541999775191',
+    href: 'https://wa.me/5541998910163',
     target: '_blank'
   }
 };

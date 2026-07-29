@@ -11,7 +11,7 @@ export const contactUS = {
       content: 'Fale com nossa equipe comercial para tirar dúvidas rápidas e solicitar propostas.',
       link: { 
         children: 'Iniciar Conversa', 
-        href: 'https://wa.me/5541999775191', 
+        href: 'https://wa.me/5541998910163', 
         target: '_blank', 
         rel: 'noopener noreferrer' 
       }
