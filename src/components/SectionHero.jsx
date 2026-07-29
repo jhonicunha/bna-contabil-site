@@ -95,7 +95,7 @@ export default function SectionHero({ heading, search = false, offer = false, br
         borderBottomLeftRadius: boxRadius,
         borderBottomRightRadius: boxRadius,
         bgcolor: '#121212',
-        pt: { xs: 12, sm: 14, md: 16 },
+        pt: { xs: 16, sm: 18, md: 20 },
         pb: { xs: 4, sm: 5, md: 6 }
       }}
     >

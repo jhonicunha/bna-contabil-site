@@ -73,14 +73,14 @@ export default function CtaContact({ heading, caption, label }) {
 
                 {/* Google Map Iframe pointing to Curitiba */}
                 {/* Direct Action Buttons */}
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+                <Stack direction="column" spacing={1.5} sx={{ width: 1 }}>
                   <Button
                     variant="contained"
                     color="primary"
                     startIcon={<SvgIcon name="tabler-brand-whatsapp" size={18} color="common.white" />}
                     href="https://wa.me/5541999775191"
                     target="_blank"
-                    sx={{ flex: 1, py: 1.25, borderRadius: 2, textTransform: 'none', fontWeight: 600 }}
+                    sx={{ py: 1.25, borderRadius: 2, textTransform: 'none', fontWeight: 600 }}
                   >
                     (41) 99977-5191
                   </Button>
@@ -89,7 +89,7 @@ export default function CtaContact({ heading, caption, label }) {
                     color="primary"
                     startIcon={<SvgIcon name="tabler-mail" size={18} color="common.white" />}
                     href="mailto:contato@bnaconsultoria.com.br"
-                    sx={{ flex: 1, py: 1.25, borderRadius: 2, textTransform: 'none', fontWeight: 600 }}
+                    sx={{ py: 1.25, borderRadius: 2, textTransform: 'none', fontWeight: 600 }}
                   >
                     contato@bnaconsultoria.com.br
                   </Button>
@@ -98,7 +98,7 @@ export default function CtaContact({ heading, caption, label }) {
                 {/* Google Map pointing to the Visconde de Guarapuava address */}
                 <Stack sx={{ gap: 1.5 }}>
                   <Typography variant="body2" sx={{ color: 'text.secondary', display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <SvgIcon name="tabler-map-pin" size={18} />
+                    <SvgIcon name="tabler-map-pin" size={18} color="#00b4d8" />
                     Av. Visconde de Guarapuava, 4628 Sala 709 - Batel, Curitiba/PR
                   </Typography>
                   <Box
@@ -112,13 +112,12 @@ export default function CtaContact({ heading, caption, label }) {
                     }}
                   >
                     <iframe
-                      src="https://maps.google.com/maps?q=Av.+Visconde+de+Guarapuava%2C+4628+-+Batel%2C+Curitiba+-+PR&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.4839556209867!2d-49.2783637246473!3d-25.45330917753641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce79a32c4a9fb%3A0x6b4028d7b3a0e50f!2sAv.%20Visc.%20de%20Guarapuava%2C%204628%20-%20Batel%2C%20Curitiba%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1722283000000!5m2!1spt-BR!2sbr"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen=""
                       loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
                     />
                   </Box>
                 </Stack>

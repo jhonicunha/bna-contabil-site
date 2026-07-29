@@ -2,26 +2,39 @@
 import branding from '@/branding.json';
 
 export const contactUS = {
-  heading: 'We’d love to hear from you',
-  caption: 'Explore key statistics and trends shaping our understanding of the current landscape.',
+  heading: 'Canais de Atendimento',
+  caption: 'Escolha a forma mais rápida de falar conosco ou envie uma mensagem no formulário abaixo.',
   list: [
     {
-      icon: 'tabler-phone',
-      title: 'Contact Sale',
-      content: 'Speak to someone from our sales team.',
-      link: { children: 'Contact Sales', href: branding.company.socialLink.support, target: '_blank', rel: 'noopener noreferrer' }
+      icon: 'tabler-brand-whatsapp',
+      title: 'Falar no WhatsApp',
+      content: 'Fale com nossa equipe comercial para tirar dúvidas rápidas e solicitar propostas.',
+      link: { 
+        children: 'Iniciar Conversa', 
+        href: 'https://wa.me/5541999775191', 
+        target: '_blank', 
+        rel: 'noopener noreferrer' 
+      }
     },
     {
-      icon: 'tabler-help-circle',
-      title: 'Have a Question',
-      content: 'See our frequently asked question',
-      link: { children: 'Get Answers', href: '/faq' }
+      icon: 'tabler-mail',
+      title: 'E-mail Corporativo',
+      content: 'Entre em contato para assuntos institucionais, parcerias ou envio de propostas.',
+      link: { 
+        children: 'Enviar E-mail', 
+        href: 'mailto:contato@bnaconsultoria.com.br' 
+      }
     },
     {
-      icon: 'tabler-folder-check',
-      title: 'Press & Media',
-      content: 'Get in touch with our PR team',
-      link: { children: 'Press Contact', href: '/contact' }
+      icon: 'tabler-map-pin',
+      title: 'Nosso Escritório',
+      content: 'Av. Visconde de Guarapuava, 4628 Sala 709 - Batel, Curitiba/PR',
+      link: { 
+        children: 'Como Chegar', 
+        href: 'https://maps.google.com/maps?q=Av.+Visconde+de+Guarapuava%2C+4628+-+Batel%2C+Curitiba+-+PR', 
+        target: '_blank', 
+        rel: 'noopener noreferrer' 
+      }
     }
   ]
 };

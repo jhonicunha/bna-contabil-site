@@ -22,6 +22,7 @@ import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import Typeset from '@/components/Typeset';
 import { GraphicsCard } from '@/components/cards';
+import SvgIcon from '@/components/SvgIcon';
 
 import useFocusWithin from '@/hooks/useFocusWithin';
 import { withAlpha } from '@/utils/colorUtils';
@@ -64,7 +65,7 @@ export default function Partners({ heading, description, primaryBtn, sections })
         </motion.div>
         <Grid container spacing={1.5}>
           {sections.map((item, index) => (
-            <Grid key={index} size={{ xs: 6, sm: 4, md: 4 }}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }}>
               <GraphicsCard sx={{ overflow: 'hidden' }}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
@@ -91,19 +92,40 @@ export default function Partners({ heading, description, primaryBtn, sections })
                       sx={{ position: 'absolute', top: 0, height: 1, width: 1, borderRadius: { xs: 6, sm: 8, md: 10 }, zIndex: 1 }}
                     />
                     <Background />
-                    <Box sx={{ position: 'absolute', top: 0, width: 1, height: 1, textAlign: 'center' }}>
-                      <CardMedia
-                        component="img"
-                        image={GetImagePath(item.image)}
-                        sx={{
-                          px: '14.5%',
-                          pt: '16%',
-                          pb: { xs: 2, md: 1 },
-                          objectFit: 'contain'
-                        }}
-                        alt="other sections"
-                        loading="lazy"
-                      />
+                    <Box sx={{ position: 'absolute', top: 0, width: 1, height: 1, textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                      {item.image && item.image !== 'placeholder' ? (
+                        <CardMedia
+                          component="img"
+                          image={GetImagePath(item.image)}
+                          sx={{
+                            px: '14.5%',
+                            pt: '16%',
+                            pb: { xs: 2, md: 1 },
+                            objectFit: 'contain'
+                          }}
+                          alt="other sections"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <Box
+                          sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexGrow: 1,
+                            pt: '16%',
+                            pb: { xs: 2, md: 1 },
+                            color: 'primary.main',
+                            '& svg': {
+                              mx: 'auto'
+                            }
+                          }}
+                        >
+                          <Box sx={{ p: 2, bgcolor: 'primary.lighter', borderRadius: '50%', display: 'inline-flex' }}>
+                            <SvgIcon name="tabler-user" size={72} color="primary.main" />
+                          </Box>
+                        </Box>
+                      )}
                       <Box sx={{ '& div': { alignItems: 'center', pt: 0.875 } }}>
                         <Wave />
                       </Box>

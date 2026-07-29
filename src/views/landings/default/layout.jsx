@@ -19,9 +19,9 @@ import { navbar } from './data';
 
 export default function MainLayout({ children }) {
   const pathname = usePathname();
-  const isHomepage = pathname === '/';
+  const isDarkHeroPage = ['/', '/quem-somos', '/servicos', '/blog', '/contato'].includes(pathname);
 
-  const headerWrapperStyles = isHomepage
+  const headerWrapperStyles = isDarkHeroPage
     ? {
         position: 'absolute',
         top: 0,
@@ -42,8 +42,8 @@ export default function MainLayout({ children }) {
       <>
         {/* header section */}
         <Box sx={headerWrapperStyles}>
-          <Navbar isHomepage={isHomepage}>
-            <NavbarContent {...navbar} isHomepage={isHomepage} />
+          <Navbar isHomepage={isDarkHeroPage}>
+            <NavbarContent {...navbar} isHomepage={isDarkHeroPage} />
           </Navbar>
         </Box>
         {/* app/(landing)/* */}

@@ -28,6 +28,13 @@ export const partners = {
       subTitle: 'Sócio responsável pela gestão de contencioso judicial de grande escala, estruturação de negócios, revisão e recuperação de créditos tributários e planejamento fiscal.',
       image: '/assets/images/team/paulo.jpg',
       link: '#contato'
+    },
+    {
+      animationDelay: 0.5,
+      title: 'Paulo Victor da Cunha',
+      subTitle: 'Sócio contador especialista em auditoria e perícia contábil, liderando a inteligência fiscal, apuração e conformidade tributária estratégica para empresas.',
+      image: 'placeholder',
+      link: '#contato'
     }
   ]
 };

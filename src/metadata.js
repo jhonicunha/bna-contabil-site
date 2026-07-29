@@ -11,7 +11,7 @@ const ogCommonMetadata = {
   locale: 'pt_BR',
   type: 'website',
   siteName: `${branding.brandName}`,
-  images: '/assets/images/metadata/og.png' // recommended dimensions of 1200x630
+  images: '/assets/images/metadata/og.jpg' // recommended dimensions of 1200x630
 };
 
 export const mainMetadata = {

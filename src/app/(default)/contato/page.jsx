@@ -4,7 +4,12 @@ const Contato = dynamic(() => import('@/views/landings/default/contato'));
 
 export const metadata = {
   title: 'Contato',
-  description: 'Entre em contato com a equipe da BNA Contábil para tirar dúvidas, agendar reuniões com nossos contadores e peritos, ou solicitar orçamentos de planejamento tributário.'
+  description: 'Fale com os especialistas da BNA Contábil. Entre em contato por WhatsApp, e-mail, telefone ou visite nosso escritório em Curitiba/PR para uma avaliação fiscal.',
+  openGraph: {
+    title: 'Contato | BNA Contábil',
+    description: 'Fale com os especialistas da BNA Contábil. Entre em contato por WhatsApp, e-mail, telefone ou visite nosso escritório em Curitiba/PR para uma avaliação fiscal.',
+    images: '/assets/images/metadata/og.jpg'
+  }
 };
 
 export default function ContatoPage() {

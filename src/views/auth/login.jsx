@@ -98,8 +98,8 @@ export default function LoginView() {
 
         <Stack sx={{ gap: 3, mt: 4, zIndex: 3 }}>
           <Stack direction="row" sx={{ gap: 2, alignItems: 'center' }}>
-            <Box sx={{ p: 1, bgcolor: 'grey.800', borderRadius: 2, color: 'primary.light' }}>
-              <SvgIcon name="tabler-file-analytics" size={20} />
+            <Box sx={{ p: 1.25, bgcolor: 'rgba(0, 180, 216, 0.15)', borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <SvgIcon name="tabler-file-analytics" size={20} color="#00b4d8" />
             </Box>
             <Typography variant="body1" sx={{ color: 'grey.300' }}>
               Upload e download seguro de guias e relatórios mensais.
@@ -107,8 +107,8 @@ export default function LoginView() {
           </Stack>
 
           <Stack direction="row" sx={{ gap: 2, alignItems: 'center' }}>
-            <Box sx={{ p: 1, bgcolor: 'grey.800', borderRadius: 2, color: 'primary.light' }}>
-              <SvgIcon name="tabler-shield-check" size={20} />
+            <Box sx={{ p: 1.25, bgcolor: 'rgba(0, 180, 216, 0.15)', borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <SvgIcon name="tabler-shield-check" size={20} color="#00b4d8" />
             </Box>
             <Typography variant="body1" sx={{ color: 'grey.300' }}>
               Ambiente de alta criptografia em total conformidade com a LGPD.
@@ -116,8 +116,8 @@ export default function LoginView() {
           </Stack>
 
           <Stack direction="row" sx={{ gap: 2, alignItems: 'center' }}>
-            <Box sx={{ p: 1, bgcolor: 'grey.800', borderRadius: 2, color: 'primary.light' }}>
-              <SvgIcon name="tabler-message-chatbot" size={20} />
+            <Box sx={{ p: 1.25, bgcolor: 'rgba(0, 180, 216, 0.15)', borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <SvgIcon name="tabler-message-chatbot" size={20} color="#00b4d8" />
             </Box>
             <Typography variant="body1" sx={{ color: 'grey.300' }}>
               Canal de comunicação direto com peritos tributários e contadores.

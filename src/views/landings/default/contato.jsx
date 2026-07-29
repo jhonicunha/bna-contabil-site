@@ -17,7 +17,7 @@ export default function Contato() {
   return (
     <>
       <SectionHero heading="Entre em Contato" breadcrumbs={breadcrumbs} search={false} />
-      <ContactUs4 {...contactUS} />
+      <ContactUs4 {...contactUS} showForm={false} />
       <CtaContact {...ctaContact} />
     </>
   );

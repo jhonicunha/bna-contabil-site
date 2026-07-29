@@ -16,7 +16,6 @@ import {
   ctaSimple,
   faq,
   featureServices,
-  featureWhyUs,
   hero,
   testimonial
 } from './data';
@@ -24,19 +23,11 @@ import {
 /***************************  PAGE - MAIN  ***************************/
 
 export default function Main() {
-
   return (
     <>
       <Hero {...hero} />
       <FeatureServices {...featureServices} />
       <AboutSummary {...aboutSummary} />
-
-      <LazySection
-        sections={[
-          { importFunc: () => import('@/blocks/feature').then((module) => ({ default: module.FeatureWhyUs })), props: featureWhyUs }
-        ]}
-        offset="200px"
-      />
 
       <LazySection
         sections={[
