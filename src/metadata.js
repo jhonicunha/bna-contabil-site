@@ -13,12 +13,12 @@ const ogCommonMetadata = {
   siteName: `${branding.brandName}`,
   images: [
     {
-      url: 'https://bnacontabil.com.br/assets/images/metadata/og.jpg',
-      secureUrl: 'https://bnacontabil.com.br/assets/images/metadata/og.jpg',
-      width: 1200,
-      height: 630,
+      url: 'https://bnacontabil.com.br/assets/images/metadata/og.png',
+      secureUrl: 'https://bnacontabil.com.br/assets/images/metadata/og.png',
+      width: 500,
+      height: 500,
       alt: `${branding.brandName} - Inteligência Fiscal e Contabilidade Tributária`,
-      type: 'image/jpeg'
+      type: 'image/png'
     }
   ]
 };
@@ -54,10 +54,10 @@ export const mainMetadata = {
     ...ogCommonMetadata
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title,
     description,
-    images: ['https://bnacontabil.com.br/assets/images/metadata/og.jpg']
+    images: ['https://bnacontabil.com.br/assets/images/metadata/og.png']
   }
 };
 
