@@ -7,8 +7,8 @@ import ThemeProviders from '@/components/ThemeProvider';
 /***************************  ERROR 500 - DATA  ***************************/
 
 const data = {
-  primaryBtn: { children: 'Back to Home Page' },
-  heading: 'Please try again later or feel free to contact us if the problem persists.'
+  primaryBtn: { children: 'Voltar para o Início', href: '/' },
+  heading: 'Ocorreu um erro inesperado no servidor. Por favor, tente novamente mais tarde ou entre em contato com nosso suporte.'
 };
 
 /***************************  ERROR - 500  ***************************/

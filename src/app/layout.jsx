@@ -22,7 +22,7 @@ export const metadata = { ...mainMetadata };
 // Root layout component that wraps the entire application
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         {/* Preconnect and DNS Prefetch */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />

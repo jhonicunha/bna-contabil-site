@@ -132,7 +132,7 @@ export default function Blog() {
           {/* Blog Cards Grid */}
           <Grid container spacing={4}>
             {filteredPosts.map((post) => (
-              <Grid item xs={12} sm={6} md={4} key={post.id}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={post.id}>
                 <Card
                   sx={{
                     height: '100%',

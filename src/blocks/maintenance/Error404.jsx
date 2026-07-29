@@ -5,25 +5,18 @@ import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 // @project
 import { GraphicsCard } from '@/components/cards';
 import ContainerWrapper from '@/components/ContainerWrapper';
+import LogoSection from '@/components/logo';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 // @assets
 import Error404 from '@/images/maintenance/Error404';
 
 /***************************  ERROR 404 - PAGES  ***************************/
-
-/**
- *
- * Demos:
- * - [Error404](https://www.soflinc.com.br/blocks/error404)
- *
- *  API
- * - [Error404 API](https://docs.soflinc.com.br/ui-kit/development/components/maintenance/error404#props-details)
- */
 
 export default function Error404Page({ primaryBtn, heading }) {
   return (
@@ -39,10 +32,13 @@ export default function Error404Page({ primaryBtn, heading }) {
         }}
       >
         <GraphicsCard sx={{ width: 1, height: 1, py: { xs: 3, sm: 4, md: 6 } }}>
-          <Stack sx={{ justifyContent: 'center', height: 1, gap: { xs: 4, sm: 1 } }}>
+          <Stack sx={{ justifyContent: 'center', alignItems: 'center', height: 1, gap: { xs: 2, sm: 1 } }}>
+            <Box sx={{ mb: { xs: 1, sm: 2 } }}>
+              <LogoSection />
+            </Box>
             <Error404 />
-            <Stack sx={{ gap: 2.25, alignItems: 'center', mt: { sm: -5, lg: -6.25 } }}>
-              <Typography sx={{ width: { xs: 210, sm: 300 }, textAlign: 'center' }}>{heading}</Typography>
+            <Stack sx={{ gap: 2.25, alignItems: 'center', mt: { sm: -4, lg: -5 } }}>
+              <Typography sx={{ width: { xs: 260, sm: 360, md: 450 }, textAlign: 'center', color: 'text.secondary' }}>{heading}</Typography>
               {primaryBtn && <Button variant="contained" size="medium" {...primaryBtn} />}
             </Stack>
           </Stack>

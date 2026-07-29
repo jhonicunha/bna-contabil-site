@@ -7,8 +7,8 @@ import ThemeProviders from '@/components/ThemeProvider';
 /***************************  ERROR 404 - DATA  ***************************/
 
 const data = {
-  primaryBtn: { children: 'Back to Home Page', onClick: () => window.history.back() },
-  heading: `Looks like you've taken a wrong turn. Lets get you back on track!`
+  primaryBtn: { children: 'Voltar para o Início', href: '/' },
+  heading: 'Ops! Parece que você tentou acessar uma página que não existe ou foi movida.'
 };
 
 /***************************  ERROR - 404  ***************************/
