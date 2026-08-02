@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 
 // @mui
-import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -27,15 +26,12 @@ export default function ThemeProvider({ children }) {
   const selectedTheme = themeMap[state.currentTheme]?.('data-color-scheme') || aiTheme('data-color-scheme');
 
   return (
-    <>
-      <InitColorSchemeScript attribute="data-color-scheme" defaultMode="light" />
-      <Suspense fallback={null}>
-        <MuiThemeProvider disableTransitionOnChange theme={selectedTheme} defaultMode="light">
-          <CssBaseline enableColorScheme />
-          {children}
-        </MuiThemeProvider>
-      </Suspense>
-    </>
+    <Suspense fallback={null}>
+      <MuiThemeProvider disableTransitionOnChange theme={selectedTheme} defaultMode="light">
+        <CssBaseline enableColorScheme />
+        {children}
+      </MuiThemeProvider>
+    </Suspense>
   );
 }
 
