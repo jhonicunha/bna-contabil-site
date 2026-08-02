@@ -8,16 +8,44 @@ import Typography from '@mui/material/Typography';
 // @project
 import { FeatureServices, FeatureWhyUs } from '@/blocks/feature';
 import { CtaContact } from '@/blocks/cta';
+import { Faq } from '@/blocks/faq';
 import SectionHero from '@/components/SectionHero';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
 
 // @data
-import { featureServices, featureWhyUs, ctaContact } from './data';
+import { featureServices, featureWhyUs, ctaContact, faq } from './data';
 
 const breadcrumbs = [
   { title: 'Início', to: '/' },
   { title: 'Serviços' }
+];
+
+const businessSegments = [
+  {
+    icon: 'tabler-seeding',
+    profile: 'Simples Nacional',
+    description: 'Empresas em crescimento que precisam avaliar o momento certo de migração de regime e evitar excesso de carga tributária.',
+    services: 'Planejamento Tributário e Contabilidade Consultiva'
+  },
+  {
+    icon: 'tabler-building-store',
+    profile: 'Lucro Presumido',
+    description: 'Negócios de médio porte com margens elevadas, onde a análise do enquadramento ideal gera economia direta no caixa.',
+    services: 'Planejamento Tributário, Revisão Fiscal e BPO Financeiro'
+  },
+  {
+    icon: 'tabler-building-skyscraper',
+    profile: 'Lucro Real',
+    description: 'Grandes operações e grupos econômicos com apuração complexa, alto volume de créditos e necessidade de auditoria contínua.',
+    services: 'Recuperação de Créditos, Gestão de Passivos e Defesas'
+  },
+  {
+    icon: 'tabler-home-dollar',
+    profile: 'Holdings Patrimoniais',
+    description: 'Famílias e grupos empresariais que buscam proteção patrimonial, sucessão organizada e eficiência tributária de longo prazo.',
+    services: 'Planejamento Societário e Gestão de Passivos e Defesas'
+  }
 ];
 
 const processSteps = [
@@ -57,7 +85,53 @@ export default function Servicos() {
       
       {/* Detailed Specialties Tabs */}
       <FeatureWhyUs {...featureWhyUs} />
-      
+
+      {/* Segmentos Atendidos */}
+      <ContainerWrapper sx={{ py: { xs: 6, md: 10 } }}>
+        <Stack sx={{ alignItems: 'center', textAlign: 'center', mb: { xs: 5, md: 7 }, gap: 1.5 }}>
+          <Typography variant="h2" sx={{ fontWeight: 700 }}>
+            Qual o Enquadramento da Sua Empresa?
+          </Typography>
+          <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 650, lineHeight: 1.7 }}>
+            Cada regime tributário e perfil societário exige uma combinação diferente dos nossos serviços. Veja onde sua empresa se encaixa.
+          </Typography>
+        </Stack>
+
+        <Grid container spacing={3}>
+          {businessSegments.map((item, idx) => (
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
+              <Card sx={{ height: '100%', p: 3, borderRadius: 3, border: '1px solid', borderColor: 'grey.200' }}>
+                <Stack sx={{ gap: 2, height: '100%' }}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2.5,
+                      bgcolor: 'rgba(0, 180, 216, 0.1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#00b4d8'
+                    }}
+                  >
+                    <SvgIcon name={item.icon} size={26} />
+                  </Box>
+                  <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                    {item.profile}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7 }}>
+                    {item.description}
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#00b4d8', fontWeight: 600, mt: 'auto' }}>
+                    {item.services}
+                  </Typography>
+                </Stack>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </ContainerWrapper>
+
       {/* Process / How It Works Section */}
       <Box sx={{ bgcolor: '#121212', color: 'common.white', py: { xs: 8, md: 12 }, borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <ContainerWrapper>
@@ -145,6 +219,9 @@ export default function Servicos() {
           </Grid>
         </ContainerWrapper>
       </Box>
+
+      {/* Perguntas Frequentes */}
+      <Faq {...faq} />
 
       {/* Call to Action */}
       <CtaContact {...ctaContact} />

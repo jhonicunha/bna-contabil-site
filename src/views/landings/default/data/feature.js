@@ -2,8 +2,6 @@
 import branding from '@/branding.json';
 import { IconType } from '@/enum';
 
-const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
-
 export const feature2 = {
   heading: 'Cultura de Inovação',
   caption: 'Junte-se a uma equipe que adota ideias inovadoras e cultiva um ambiente onde sua criatividade pode prosperar.',
@@ -196,7 +194,7 @@ export const featureWhyUs = {
       title: 'Recuperação de Créditos',
       title2: 'Recupere o Fluxo de Caixa Perdido',
       description: 'Nossa auditoria digital mapeia inconsistências e créditos acumulados de impostos (PIS/COFINS, ICMS e IPI) prontos para compensação administrativa imediata.',
-      image: '/assets/images/graphics/default/recuperacao-creditos.jpg',
+      image: '/assets/images/blog/post2.jpg',
       list: [
         { primary: 'Auditoria eletrônica automatizada dos últimos 60 meses' },
         { primary: 'Créditos monofásicos e exclusão do ICMS na base de cálculo' },
@@ -209,7 +207,7 @@ export const featureWhyUs = {
       title: 'Planejamento Fiscal',
       title2: 'Redução Legal da Carga Tributária',
       description: 'Modelamos cenários operacionais complexos para estruturar a alternativa legal de menor imposto possível para sua empresa.',
-      image: '/assets/images/graphics/default/planejamento-fiscal.jpg',
+      image: '/assets/images/blog/post1.jpg',
       list: [
         { primary: 'Transição estratégica entre regimes (Lucro Real vs. Presumido)' },
         { primary: 'Aproveitamento de incentivos e benefícios fiscais estaduais' },
@@ -222,12 +220,51 @@ export const featureWhyUs = {
       title: 'Gestão de Passivos e Defesas',
       title2: 'Segurança Jurídica e Defesas Técnicas',
       description: 'Aproveitamos a ampla bagagem jurídica da BNA para redigir defesas administrativas robustas e atuar na blindagem e prevenção de riscos dos sócios.',
-      image: '/assets/images/graphics/default/gestao-passivos.jpg',
+      image: '/assets/images/blog/post3.jpg',
       list: [
         { primary: 'Elaboração de impugnações e defesas fiscais de alto nível' },
         { primary: 'Acompanhamento de fiscalizações municipais, estaduais e federais' },
         { primary: 'Consultoria preventiva e blindagem patrimonial de sócios' },
         { primary: 'Estruturação de parcelamentos especiais e CND' }
+      ]
+    },
+    {
+      icon: 'tabler-businessplan',
+      title: 'Contabilidade Consultiva',
+      title2: 'Contabilidade que Vira Decisão Estratégica',
+      description: 'Vamos além da escrituração obrigatória: transformamos os dados contábeis da sua empresa em relatórios gerenciais e indicadores que apoiam decisões de crescimento, investimento e precificação.',
+      image: '/assets/images/blog/post4.jpg',
+      list: [
+        { primary: 'Relatórios gerenciais mensais com indicadores de performance (DRE gerencial, fluxo de caixa)' },
+        { primary: 'Reuniões periódicas de alinhamento com sócios e diretoria financeira' },
+        { primary: 'Otimização de rotinas fiscais e contábeis com uso de tecnologia' },
+        { primary: 'Suporte direto na tomada de decisão para expansão e novos investimentos' }
+      ]
+    },
+    {
+      icon: 'tabler-device-analytics',
+      title: 'BPO Financeiro',
+      title2: 'Sua Gestão Financeira em Mãos Especializadas',
+      description: 'Terceirizamos a operação financeira do dia a dia da sua empresa com precisão contábil e total conformidade legal, liberando a gestão para focar no core business.',
+      image: '/assets/images/blog/post6.jpg',
+      list: [
+        { primary: 'Contas a pagar e a receber com conciliação bancária diária' },
+        { primary: 'Emissão e controle de notas fiscais e boletos' },
+        { primary: 'Fluxo de caixa consolidado e projeções financeiras' },
+        { primary: 'Conformidade legal integral com apuração e obrigações fiscais' }
+      ]
+    },
+    {
+      icon: 'tabler-hierarchy',
+      title: 'Planejamento Societário',
+      title2: 'Estrutura Societária Blindada e Eficiente',
+      description: 'Estruturamos e reorganizamos o desenho societário da sua empresa para reduzir riscos, otimizar a carga tributária e proteger o patrimônio dos sócios em operações de crescimento.',
+      image: '/assets/images/blog/post5.jpg',
+      list: [
+        { primary: 'Constituição e reestruturação de holdings patrimoniais e familiares' },
+        { primary: 'Fusões, cisões e incorporações societárias' },
+        { primary: 'Sucessão empresarial e planejamento patrimonial' },
+        { primary: 'Blindagem patrimonial dos sócios em operações de risco' }
       ]
     }
   ]
