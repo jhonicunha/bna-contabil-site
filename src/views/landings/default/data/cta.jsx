@@ -6,14 +6,14 @@ export const ctaBanner = {
     target: '_blank'
   },
   profileGroups: {
-    review: 'Mais de 500 empresas com economia tributária legal'
+    review: 'Mais de 500 empresas com a contabilidade sempre em dia'
   },
   list: [
-    { primary: 'Equipe Multidisciplinar' },
+    { primary: 'Equipe Especializada' },
     { primary: 'Foco em Resultados' },
-    { primary: 'Segurança Jurídica' },
+    { primary: 'Atendimento Consultivo' },
     { primary: 'Experiência Consolidada' },
-    { primary: 'Auditoria Digital Avançada' },
+    { primary: 'Tecnologia Contábil Avançada' },
     { primary: 'Compliance de Alto Nível' }
   ],
   clientContent: 'Fale Conosco'
@@ -24,7 +24,7 @@ export const ctaBanner = {
 export const ctaContact = {
   label: 'Contato',
   heading: 'Fale Conosco',
-  caption: 'Tem alguma dúvida ou gostaria de realizar uma avaliação tributária? Preencha o formulário ou fale com nossa equipe pelos canais diretos.'
+  caption: 'Tem alguma dúvida ou gostaria de realizar uma avaliação contábil? Preencha o formulário ou fale com nossa equipe pelos canais diretos.'
 };
 
 export const cta10 = {
@@ -46,8 +46,8 @@ export const cta10 = {
 };
 
 export const ctaSimple = {
-  heading: 'Pronto para otimizar os resultados da sua empresa?',
-  caption: 'Fale com os nossos especialistas e descubra como gerar caixa com total segurança fiscal.',
+  heading: 'Pronto para organizar a contabilidade da sua empresa?',
+  caption: 'Fale com os nossos especialistas e descubra como manter sua contabilidade sempre em dia e organizada.',
   primaryBtn: {
     children: 'Falar com um Especialista',
     href: 'https://wa.me/5541998910163',

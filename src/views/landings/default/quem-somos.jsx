@@ -8,8 +8,6 @@ import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
 
 // @project
 import SectionHero from '@/components/SectionHero';
@@ -17,7 +15,7 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
 import { Partners } from '@/blocks/other';
 import { CtaContact } from '@/blocks/cta';
-import { partners, careers, ctaContact } from './data';
+import { partners, ctaContact } from './data';
 
 const breadcrumbs = [
   { title: 'Início', to: '/' },
@@ -30,14 +28,14 @@ const historyMilestones = [
     confirmed: false,
     icon: 'tabler-building-bank',
     title: 'Fundação da BNA Consultoria',
-    description: 'Início da atuação em advocacia tributária e reestruturação de passivos, construindo a base jurídica que sustenta a operação até hoje.'
+    description: 'Fundação da BNA Consultoria, empresa parceira especializada em tributário e jurídico.'
   },
   {
     period: 'Julho de 2026',
     confirmed: true,
     icon: 'tabler-users-plus',
     title: 'Nasce a BNA Contábil',
-    description: 'Entrada do sócio Paulo Cunha, Contador e Perito Tributário, unindo a bagagem jurídica da BNA à alta precisão técnica em contabilidade e perícia.'
+    description: 'Entrada do sócio Paulo Cunha, Contador, iniciando a operação da BNA Contábil com foco 100% em contabilidade consultiva e BPO contábil.'
   },
   {
     period: '2026',
@@ -51,7 +49,7 @@ const historyMilestones = [
     confirmed: true,
     icon: 'tabler-rocket',
     title: 'Área do Cliente Digital',
-    description: 'Fase 2 do projeto: portal seguro para upload e download de documentos fiscais, guias de impostos e relatórios contábeis.'
+    description: 'Fase 2 do projeto: portal seguro para upload e download de documentos contábeis, guias e relatórios.'
   }
 ];
 
@@ -59,22 +57,22 @@ const segments = [
   {
     icon: 'tabler-building-store',
     title: 'Comércio',
-    description: 'Varejo e atacado que precisam de gestão fiscal ágil e recuperação de créditos tributários.'
+    description: 'Varejo e atacado que precisam de uma rotina contábil e fiscal organizada e ágil.'
   },
   {
     icon: 'tabler-building-factory-2',
     title: 'Indústria',
-    description: 'Operações complexas com apuração de créditos de PIS, COFINS, ICMS e IPI.'
+    description: 'Operações com apuração de custos e organização contábil de processos mais complexos.'
   },
   {
     icon: 'tabler-briefcase-2',
-    title: 'Prestadores de Serviços Complexos',
-    description: 'Empresas com estruturas operacionais múltiplas e necessidade de planejamento tributário sofisticado.'
+    title: 'Prestadores de Serviços',
+    description: 'Empresas de serviços que precisam de departamento pessoal e faturamento sempre em dia.'
   },
   {
-    icon: 'tabler-home-dollar',
-    title: 'Holdings Patrimoniais e Familiares',
-    description: 'Estruturação societária para proteção de patrimônio e sucessão empresarial segura.'
+    icon: 'tabler-chart-arrows-vertical',
+    title: 'Pequenas e Médias Empresas em Crescimento',
+    description: 'Negócios que precisam de BPO contábil para escalar com organização e segurança.'
   }
 ];
 
@@ -92,10 +90,10 @@ export default function QuemSomos() {
                 Sobre a BNA Contábil
               </Typography>
               <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
-                Nascemos da união estratégica entre a sólida bagagem jurídica da <strong>BNA Consultoria</strong> e a alta precisão técnica em contabilidade e perícia do sócio <strong>Paulo Cunha</strong>. Essa fusão nos permite oferecer soluções que vão além do convencional, integrando inteligência tributária e contabilidade estratégica para impulsionar o crescimento do seu negócio.
+                A <strong>BNA Contábil</strong> nasceu para oferecer contabilidade consultiva e BPO contábil a empresas que querem uma gestão financeira organizada, tecnológica e confiável. Liderada pelo contador <strong>Paulo Cunha</strong>, unimos precisão técnica em contabilidade e perícia contábil com atendimento próximo e humano.
               </Typography>
               <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
-                Atuamos de forma consultiva, analisando cenários operacionais complexos para reduzir custos tributários de forma legal e segura, gerando fluxo de caixa e blindando o patrimônio empresarial de nossos clientes.
+                Cuidamos da rotina contábil, fiscal e de departamento pessoal da sua empresa, para que você possa focar no crescimento do seu negócio com tranquilidade e segurança.
               </Typography>
             </Stack>
           </Grid>
@@ -110,7 +108,7 @@ export default function QuemSomos() {
                     <Stack sx={{ gap: 1 }}>
                       <Typography variant="h5" sx={{ fontWeight: 600 }}>Missão</Typography>
                       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        Prover inteligência contábil e conformidade fiscal com segurança jurídica, gerando valor real e sustentabilidade para os negócios.
+                        Prover contabilidade estratégica e conformidade fiscal com precisão técnica, gerando organização e tranquilidade para os negócios que atendemos.
                       </Typography>
                     </Stack>
                   </Stack>
@@ -126,7 +124,7 @@ export default function QuemSomos() {
                     <Stack sx={{ gap: 1 }}>
                       <Typography variant="h5" sx={{ fontWeight: 600 }}>Visão</Typography>
                       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        Ser referência nacional em contabilidade estratégica e perícia tributária, reconhecida pela excelência técnica e proximidade com o cliente.
+                        Ser referência em contabilidade consultiva e BPO contábil, reconhecida pela excelência técnica e proximidade com o cliente.
                       </Typography>
                     </Stack>
                   </Stack>
@@ -144,7 +142,7 @@ export default function QuemSomos() {
             Nossa História
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 650, lineHeight: 1.7 }}>
-            Uma trajetória de solidez jurídica somada à evolução para uma contabilidade estratégica e digital.
+            Uma trajetória em evolução constante rumo a uma contabilidade estratégica e digital.
           </Typography>
         </Stack>
 
@@ -204,23 +202,23 @@ export default function QuemSomos() {
             {[
               {
                 icon: 'tabler-scale',
-                title: 'Solidez Jurídico-Tributária',
-                description: 'Nossas estratégias contábeis são alinhadas à legislação vigente e fundamentadas na ampla bagagem jurídica da BNA Consultoria.'
+                title: 'Excelência Técnica Contábil',
+                description: 'Nossas rotinas contábeis são alinhadas à legislação vigente e conduzidas com rigor técnico em cada etapa.'
               },
               {
                 icon: 'tabler-user-check',
                 title: 'Atendimento Consultivo Direto',
-                description: 'Relacionamento transparente e acompanhamento próximo conduzido diretamente pelos sócios especialistas e peritos.'
+                description: 'Relacionamento transparente e acompanhamento próximo conduzido diretamente pela equipe especializada.'
               },
               {
                 icon: 'tabler-cpu',
-                title: 'Tecnologia & Auditoria Fiscal',
-                description: 'Uso de sistemas avançados para cruzamento de dados tributários, recuperação de créditos e prevenção de passivos.'
+                title: 'Tecnologia Aplicada à Contabilidade',
+                description: 'Uso de sistemas avançados para conferência de dados, agilidade na rotina contábil e menos erros manuais.'
               },
               {
                 icon: 'tabler-shield-lock',
-                title: 'Proteção Patrimonial & Compliance',
-                description: 'Soluções voltadas para a segurança dos sócios, blindagem de patrimônio e adequação contínua às normas fiscais.'
+                title: 'Compliance e Conformidade Fiscal',
+                description: 'Soluções voltadas para manter sua empresa sempre em dia com obrigações contábeis, fiscais e trabalhistas.'
               }
             ].map((item, idx) => (
               <Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
@@ -275,7 +273,7 @@ export default function QuemSomos() {
             Segmentos que Atendemos
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 650, lineHeight: 1.7 }}>
-            Da média empresa à grande corporação, atuamos com profundidade técnica nos setores que mais demandam inteligência tributária.
+            Da pequena à média empresa, atuamos com profundidade técnica nos setores que mais precisam de uma contabilidade organizada.
           </Typography>
         </Stack>
 
@@ -313,45 +311,6 @@ export default function QuemSomos() {
 
       {/* Partners Section (Sócios Fundadores) */}
       <Partners {...partners} />
-
-      {/* Junte-se à Nossa Equipe (Carreiras) */}
-      <Box sx={{ bgcolor: 'grey.100', py: { xs: 8, md: 12 }, borderTop: '1px solid', borderBottom: '1px solid', borderColor: 'grey.200' }}>
-        <ContainerWrapper>
-          <Stack sx={{ alignItems: 'center', textAlign: 'center', mb: { xs: 5, md: 7 }, gap: 1.5 }}>
-            <Typography variant="h2" sx={{ fontWeight: 700 }}>
-              {careers.heading}
-            </Typography>
-            <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 650, lineHeight: 1.7 }}>
-              {careers.caption}
-            </Typography>
-          </Stack>
-
-          <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
-            {careers.other.map((job, idx) => (
-              <Grid size={{ xs: 12, sm: 8, md: 6 }} key={idx}>
-                <Card sx={{ height: '100%', p: 3.5, borderRadius: 3, border: '1px solid', borderColor: 'grey.200' }}>
-                  <Stack sx={{ gap: 2 }}>
-                    <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                      {job.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7 }}>
-                      {job.description}
-                    </Typography>
-                    <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap' }}>
-                      {job.chips.map((chip, chipIdx) => (
-                        <Chip key={chipIdx} icon={<SvgIcon name={chip.icon} size={16} />} label={chip.name} size="small" variant="outlined" />
-                      ))}
-                    </Stack>
-                  </Stack>
-                  <CardActions sx={{ px: 0, pt: 2.5 }}>
-                    <Button variant="contained" {...job.btn} />
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </ContainerWrapper>
-      </Box>
 
       {/* Call to Action */}
       <CtaContact {...ctaContact} />

@@ -8,12 +8,12 @@ export const hero = {
     label: (
       <>
         <Typography variant="caption" sx={{ color: 'grey.400' }}>
-          BNA Consultoria
+          BNA Contábil
         </Typography>
         <Chip
           label={
             <Typography variant="caption" sx={{ color: 'primary.main', fontWeight: 600 }}>
-              Tributária & Contábil
+              Contabilidade & BPO
             </Typography>
           }
           sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
@@ -21,20 +21,20 @@ export const hero = {
       </>
     )
   },
-  headLine: 'Inteligência Fiscal e Contabilidade Estratégica para o seu Negócio',
-  captionLine: 'Unimos a solidez jurídica da BNA Consultoria à precisão contábil para gerar caixa, reduzir impostos legalmente e proteger o patrimônio da sua empresa.',
-  primaryBtn: { 
-    children: 'Falar com um Especialista', 
+  headLine: 'Contabilidade Estratégica para Impulsionar o seu Negócio',
+  captionLine: 'Cuidamos da contabilidade, do BPO contábil e do departamento pessoal da sua empresa com precisão técnica e tecnologia, para você focar no crescimento do seu negócio.',
+  primaryBtn: {
+    children: 'Falar com um Especialista',
     href: 'https://wa.me/5541998910163',
-    target: '_blank', 
+    target: '_blank',
     rel: 'noopener noreferrer'
   },
   videoSrc: '',
   videoThumbnail: '/assets/images/bna_hero_building.png',
   listData: [
-    { image: '/assets/images/shared/chart.svg', title: 'Planejamento Tributário' },
-    { image: '/assets/images/shared/money.svg', title: 'Recuperação de Créditos' },
-    { image: '/assets/images/shared/check.svg', title: 'Revisão Fiscal' },
-    { image: '/assets/images/shared/shield.svg', title: 'Gestão de Passivos' }
+    { image: '/assets/images/shared/chart.svg', title: 'BPO Contábil' },
+    { image: '/assets/images/shared/money.svg', title: 'Departamento Pessoal' },
+    { image: '/assets/images/shared/check.svg', title: 'Contabilidade Consultiva' },
+    { image: '/assets/images/shared/shield.svg', title: 'Abertura de Empresas' }
   ]
 };

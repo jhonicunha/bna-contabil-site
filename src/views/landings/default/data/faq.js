@@ -7,55 +7,55 @@ export const faq = {
   defaultExpanded: 'Geral',
   faqList: [
     {
-      question: 'Qual a diferença entre a advocacia tributária (BNA Consultoria) e a BNA Contábil?',
-      answer: 'A advocacia tributária (BNA Consultoria) atua na esfera jurídica, defesas e reestruturação de passivos judiciais. A contabilidade tributária (BNA Contábil) foca no compliance fiscal diário, apuração de tributos, entrega de obrigações acessórias e identificação de créditos administrativos, oferecendo uma solução completa e sinérgica.',
+      question: 'A BNA Contábil também cuida de assuntos tributários e jurídicos?',
+      answer: 'Não. A BNA Contábil é especializada em contabilidade, BPO contábil e departamento pessoal. Para assuntos tributários e jurídicos, contamos com a parceria da BNA Consultoria, que atua nessa frente de forma independente.',
       category: 'Geral'
     },
     {
       question: 'A BNA Contábil atende empresas de quais portes e segmentos?',
-      answer: 'Atendemos desde médias empresas a grandes corporações de diversos setores, com especial foco em comércio, indústria, prestadores de serviços complexos e holdings patrimoniais/familiares.',
+      answer: 'Atendemos pequenas e médias empresas de diversos setores, com foco em comércio, indústria e prestadores de serviços que precisam de uma contabilidade organizada e presente no dia a dia.',
       category: 'Geral'
     },
     {
-      question: 'Como funciona o processo de Recuperação de Créditos Tributários?',
+      question: 'Como vocês garantem a segurança dos meus dados contábeis?',
+      answer: 'Trabalhamos em total conformidade com a LGPD, com sistemas seguros para troca e armazenamento de documentos e acesso restrito às informações da sua empresa.',
+      category: 'Geral'
+    },
+    {
+      question: 'Como funciona a contratação do BPO Contábil?',
       answer: {
-        content: 'Nossa equipe realiza um diagnóstico digital completo dos últimos 5 anos de escrituração fiscal da sua empresa. Identificamos valores recolhidos a maior ou indevidamente de forma administrativa e realizamos os procedimentos de retificação e compensação de forma rápida e segura.',
+        content: 'Fazemos um diagnóstico da situação contábil atual da sua empresa, migramos os dados com segurança e assumimos a rotina contábil e fiscal mensal.',
         type: 'list',
         data: [
-          { primary: 'Diagnóstico digital e auditoria eletrônica gratuita.' },
-          { primary: 'Protocolo de retificação e compensação 100% administrativo.' },
-          { primary: 'Acompanhamento pós-compensação para total segurança.' }
+          { primary: 'Diagnóstico inicial e levantamento de documentos.' },
+          { primary: 'Migração de dados e cadastro na nossa rotina.' },
+          { primary: 'Acompanhamento contínuo com relatórios periódicos.' }
         ]
       },
-      category: 'Créditos Fiscais'
+      category: 'BPO Contábil'
     },
     {
-      question: 'Quais tributos podem ser recuperados administrativamente?',
-      answer: 'Os principais tributos passíveis de recuperação administrativa incluem PIS e COFINS (especialmente monofásicos e exclusão do ICMS de suas bases de cálculo), ICMS (créditos acumulados e substituição tributária), IPI e encargos previdenciários (INSS sobre verbas indenizatórias).',
-      category: 'Créditos Fiscais'
+      question: 'Quais documentos preciso enviar mensalmente?',
+      answer: 'Geralmente solicitamos notas fiscais emitidas e recebidas, extratos bancários e comprovantes de despesas do mês. Nossa equipe orienta exatamente o que é necessário para o seu tipo de negócio.',
+      category: 'BPO Contábil'
     },
     {
-      question: 'O que é o Planejamento Tributário Estratégico?',
+      question: 'Como funciona o Departamento Pessoal e a folha de pagamento?',
       answer: {
-        content: 'É um estudo detalhado da operação e estrutura da empresa para identificar formas legais de reduzir a carga de impostos pagos. Avaliamos a melhor opção de enquadramento anual.',
+        content: 'Cuidamos de toda a rotina de departamento pessoal da sua empresa, desde a admissão até o desligamento de colaboradores.',
         type: 'list',
         data: [
-          { primary: 'Simulação comparativa entre Lucro Real, Presumido e Simples Nacional.' },
-          { primary: 'Estudo de incentivos fiscais estaduais (como no Paraná).' },
-          { primary: 'Reorganização societária e operacional para eficiência tributária.' }
+          { primary: 'Admissão, rescisão e cálculo de férias e 13º salário.' },
+          { primary: 'Folha de pagamento mensal e encargos trabalhistas.' },
+          { primary: 'Envio das obrigações do eSocial dentro do prazo.' }
         ]
       },
-      category: 'Serviços Fiscais'
-    },
-    {
-      question: 'Como a BNA garante a segurança das compensações fiscais?',
-      answer: 'Todas as nossas análises são fundamentadas na legislação vigente, instruções normativas da Receita Federal e decisões consolidadas dos tribunais superiores (STF e STJ). Não realizamos procedimentos de risco ou sem lastro documental sólido.',
-      category: 'Serviços Fiscais'
+      category: 'Departamento Pessoal'
     }
   ],
   getInTouch: {
     link: { children: 'Falar com um Consultor', href: 'https://wa.me/5541998910163', target: '_blank', rel: 'noopener noreferrer' }
   },
-  categories: ['Geral', 'Serviços Fiscais', 'Créditos Fiscais'],
+  categories: ['Geral', 'BPO Contábil', 'Departamento Pessoal'],
   activeCategory: 'Geral'
 };

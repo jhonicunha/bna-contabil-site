@@ -4,10 +4,10 @@ const Blog = dynamic(() => import('@/views/landings/default/blog'));
 
 export const metadata = {
   title: 'Blog',
-  description: 'Acompanhe as últimas novidades, artigos e dicas sobre inteligência fiscal, holding familiar, reforma tributária e planejamento tributário estratégico.',
+  description: 'Acompanhe artigos e dicas sobre BPO contábil, departamento pessoal, contabilidade consultiva e abertura de empresas.',
   openGraph: {
     title: 'Blog | BNA Contábil',
-    description: 'Acompanhe as últimas novidades, artigos e dicas sobre inteligência fiscal, holding familiar, reforma tributária e planejamento tributário estratégico.',
+    description: 'Acompanhe artigos e dicas sobre BPO contábil, departamento pessoal, contabilidade consultiva e abertura de empresas.',
     images: '/assets/images/metadata/og.jpg'
   }
 };

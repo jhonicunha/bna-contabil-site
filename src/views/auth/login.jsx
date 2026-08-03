@@ -88,10 +88,10 @@ export default function LoginView() {
           <Logo sx={{ '& path': { fill: '#fff' } }} /> {/* White logo styling */}
           <Stack sx={{ gap: 2, mt: 8 }}>
             <Typography variant="h1" sx={{ color: 'common.white', fontWeight: 700, lineHeight: 1.2 }}>
-              Inteligência Fiscal &<br />Contabilidade Estratégica
+              Contabilidade Estratégica &<br />Área do Cliente
             </Typography>
             <Typography variant="h5" sx={{ color: 'grey.400', fontWeight: 400, maxWidth: 500 }}>
-              Gerencie seus documentos contábeis e fiscais com facilidade e total segurança jurídica.
+              Gerencie seus documentos contábeis e fiscais com facilidade e segurança.
             </Typography>
           </Stack>
         </Stack>
@@ -120,7 +120,7 @@ export default function LoginView() {
               <SvgIcon name="tabler-message-chatbot" size={20} color="#00b4d8" />
             </Box>
             <Typography variant="body1" sx={{ color: 'grey.300' }}>
-              Canal de comunicação direto com peritos tributários e contadores.
+              Canal de comunicação direto com a equipe de contadores.
             </Typography>
           </Stack>
         </Stack>

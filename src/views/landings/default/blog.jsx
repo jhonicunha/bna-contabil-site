@@ -31,61 +31,61 @@ const breadcrumbs = [
 const blogPosts = [
   {
     id: 1,
-    title: 'Planejamento Tributário para 2027: O Guia Definitivo para Sua Empresa',
-    excerpt: 'Descubra como estruturar seu regime tributário e aproveitar incentivos legais para reduzir drasticamente a carga de impostos no próximo ano.',
-    category: 'Planejamento Tributário',
+    title: 'BPO Contábil: Como Terceirizar sua Contabilidade com Segurança',
+    excerpt: 'Entenda como funciona o BPO contábil e por que ele pode organizar a rotina financeira da sua empresa sem aumentar sua equipe interna.',
+    category: 'BPO Contábil',
     date: '18 Julho, 2026',
     readTime: '5 min de leitura',
     image: '/assets/images/blog/post1.jpg'
   },
   {
     id: 2,
-    title: 'Recuperação de Créditos: O Caixa Escondido na Contabilidade do Seu Negócio',
-    excerpt: 'Muitas empresas pagam impostos a maior sem saber. Saiba como identificar e reaver créditos tributários de forma administrativa e segura.',
-    category: 'Recuperação de Créditos',
+    title: 'eSocial e Departamento Pessoal: Evitando Erros na Folha de Pagamento',
+    excerpt: 'Saiba quais são os erros mais comuns no envio de obrigações do eSocial e como uma rotina bem estruturada evita multas trabalhistas.',
+    category: 'Departamento Pessoal',
     date: '15 Julho, 2026',
     readTime: '6 min de leitura',
     image: '/assets/images/blog/post2.jpg'
   },
   {
     id: 3,
-    title: 'Como a Gestão de Passivos Evita Autuações Fiscais Graves',
-    excerpt: 'Entenda os principais riscos na declaração de obrigações acessórias e como auditorias internas regulares evitam multas da Receita Federal.',
-    category: 'Gestão de Passivos',
+    title: 'Como a Contabilidade Consultiva Ajuda na Tomada de Decisão',
+    excerpt: 'Relatórios gerenciais bem construídos transformam números em decisões. Veja como usar a contabilidade a favor do crescimento do negócio.',
+    category: 'Contabilidade Consultiva',
     date: '10 Julho, 2026',
     readTime: '4 min de leitura',
     image: '/assets/images/blog/post3.jpg'
   },
   {
     id: 4,
-    title: 'Revisão Fiscal Periódica: O Escudo Contra Passivos Ocultos',
-    excerpt: 'Análise detalhada de como a revisão dos processos tributários anteriores identifica gargalos fiscais e protege o patrimônio dos sócios.',
-    category: 'Revisão Fiscal',
+    title: 'Abertura de Empresa: Passo a Passo para Formalizar seu Negócio',
+    excerpt: 'Do registro societário ao alvará de funcionamento: entenda cada etapa necessária para abrir uma empresa com segurança.',
+    category: 'Abertura de Empresas',
     date: '05 Julho, 2026',
     readTime: '7 min de leitura',
     image: '/assets/images/blog/post4.jpg'
   },
   {
     id: 5,
-    title: 'Holding Familiar: Proteção Patrimonial e Sucessão Eficiente',
-    excerpt: 'Conheça as vantagens fiscais e corporativas de organizar o patrimônio familiar através de uma estrutura societária sob medida.',
-    category: 'Planejamento Tributário',
+    title: 'Escrituração Contábil: Por que Manter os Livros Sempre em Dia',
+    excerpt: 'A escrituração contábil em dia evita problemas com auditorias, financiamentos e certidões. Entenda a importância dessa rotina.',
+    category: 'BPO Contábil',
     date: '28 Junho, 2026',
     readTime: '5 min de leitura',
     image: '/assets/images/blog/post5.jpg'
   },
   {
     id: 6,
-    title: 'Novas Regras da Reforma Tributária: O que muda e como se preparar',
-    excerpt: 'O cronograma de transição dos novos impostos está avançando. Prepare sua equipe contábil para as principais mudanças operacionais.',
-    category: 'Legislação',
+    title: 'Mudanças na Legislação Contábil: O que Muda em 2027',
+    excerpt: 'O cronograma de mudanças contábeis e fiscais está avançando. Prepare sua empresa para as principais novidades do próximo ano.',
+    category: 'Legislação Contábil',
     date: '20 Junho, 2026',
     readTime: '8 min de leitura',
     image: '/assets/images/blog/post6.jpg'
   }
 ];
 
-const categories = ['Todos', 'Planejamento Tributário', 'Recuperação de Créditos', 'Gestão de Passivos', 'Revisão Fiscal', 'Legislação'];
+const categories = ['Todos', 'BPO Contábil', 'Departamento Pessoal', 'Contabilidade Consultiva', 'Abertura de Empresas', 'Legislação Contábil'];
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('Todos');

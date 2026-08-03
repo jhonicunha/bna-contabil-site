@@ -44,8 +44,8 @@ export const careers = {
   caption: 'Faça parte de um time dedicado a entregar excelência técnica e resultados financeiros reais aos nossos clientes.',
   other: [
     {
-      title: 'Analista Fiscal Sênior',
-      description: 'Responsável pela revisão de obrigações tributárias e identificação de créditos administrativos.',
+      title: 'Analista Contábil Sênior',
+      description: 'Responsável pela escrituração contábil e fiscal e pelo acompanhamento das obrigações mensais dos clientes.',
       chips: [
         { icon: 'tabler-map-pin', name: 'Curitiba (Presencial)' },
         { icon: 'tabler-history', name: 'Tempo Integral' }

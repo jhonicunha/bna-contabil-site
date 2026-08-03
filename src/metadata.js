@@ -4,8 +4,8 @@ import { PAGE_PATH, SECTION_PATH } from '@/path';
 
 /***************************  SEO METADATA - MAIN LAYOUT  ***************************/
 
-const title = `${branding.brandName} - Inteligência Fiscal e Contabilidade Tributária`;
-const description = `A BNA Contábil une a solidez jurídica da BNA Consultoria à inteligência contábil de alta performance. Oferecemos planejamento tributário, recuperação de créditos fiscais e gestão contábil estratégica para impulsionar os resultados financeiros e proteger o patrimônio da sua empresa.`;
+const title = `${branding.brandName} - Contabilidade Consultiva e BPO Contábil`;
+const description = `A BNA Contábil oferece contabilidade consultiva, BPO contábil, departamento pessoal e abertura de empresas com tecnologia e atendimento próximo, para manter a gestão contábil e fiscal do seu negócio sempre em dia.`;
 
 const ogCommonMetadata = {
   locale: 'pt_BR',
@@ -17,7 +17,7 @@ const ogCommonMetadata = {
       secureUrl: 'https://bnacontabil.com.br/assets/images/metadata/og.png',
       width: 500,
       height: 500,
-      alt: `${branding.brandName} - Inteligência Fiscal e Contabilidade Tributária`,
+      alt: `${branding.brandName} - Contabilidade Consultiva e BPO Contábil`,
       type: 'image/png'
     }
   ]
@@ -31,15 +31,15 @@ export const mainMetadata = {
   description,
   applicationName: title,
   keywords: [
-    'Contabilidade Tributária',
+    'Contabilidade Empresarial',
     'BNA Contábil',
-    'Planejamento Fiscal',
-    'Recuperação de Créditos',
-    'Holding Patrimonial',
-    'Revisão Fiscal',
-    'Consultoria Tributária',
-    'Elisão Fiscal',
-    'Gestão de Passivos Fiscais',
+    'BPO Contábil',
+    'Departamento Pessoal',
+    'Folha de Pagamento',
+    'Abertura de Empresa',
+    'Contabilidade Consultiva',
+    'Escrituração Fiscal',
+    'Contabilidade Online',
     'Curitiba Contabilidade'
   ],
   creator: `${branding.company.name}`,

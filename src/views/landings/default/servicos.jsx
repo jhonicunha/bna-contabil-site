@@ -24,53 +24,53 @@ const breadcrumbs = [
 const businessSegments = [
   {
     icon: 'tabler-seeding',
-    profile: 'Simples Nacional',
-    description: 'Empresas em crescimento que precisam avaliar o momento certo de migração de regime e evitar excesso de carga tributária.',
-    services: 'Planejamento Tributário e Contabilidade Consultiva'
+    profile: 'Abrindo a Empresa',
+    description: 'Você está formalizando o negócio agora e precisa de constituição societária, alvarás e registro feitos com segurança.',
+    services: 'Abertura de Empresas'
   },
   {
     icon: 'tabler-building-store',
-    profile: 'Lucro Presumido',
-    description: 'Negócios de médio porte com margens elevadas, onde a análise do enquadramento ideal gera economia direta no caixa.',
-    services: 'Planejamento Tributário, Revisão Fiscal e BPO Financeiro'
+    profile: 'Pequena Empresa em Estruturação',
+    description: 'Sua empresa já opera, mas a rotina contábil e fiscal ainda precisa de organização e de uma equipe de confiança.',
+    services: 'BPO Contábil e Escrituração Fiscal'
   },
   {
     icon: 'tabler-building-skyscraper',
-    profile: 'Lucro Real',
-    description: 'Grandes operações e grupos econômicos com apuração complexa, alto volume de créditos e necessidade de auditoria contínua.',
-    services: 'Recuperação de Créditos, Gestão de Passivos e Defesas'
+    profile: 'Empresa em Expansão',
+    description: 'Negócio em crescimento, com equipe própria aumentando e necessidade de relatórios para apoiar decisões.',
+    services: 'Contabilidade Consultiva e Departamento Pessoal'
   },
   {
     icon: 'tabler-home-dollar',
-    profile: 'Holdings Patrimoniais',
-    description: 'Famílias e grupos empresariais que buscam proteção patrimonial, sucessão organizada e eficiência tributária de longo prazo.',
-    services: 'Planejamento Societário e Gestão de Passivos e Defesas'
+    profile: 'Grupo Empresarial',
+    description: 'Mais de uma empresa no grupo, com necessidade de consolidar informações contábeis e manter tudo em dia.',
+    services: 'BPO Contábil e Contabilidade Consultiva'
   }
 ];
 
 const processSteps = [
   {
     step: '01',
-    title: 'Diagnóstico & Análise Fiscal',
-    description: 'Mapeamos a situação fiscal, contábil e tributária atual da sua empresa sem compromisso, identificando gargalos, riscos e oportunidades imediatas de economia.',
+    title: 'Diagnóstico Contábil',
+    description: 'Mapeamos a situação contábil, fiscal e de departamento pessoal atual da sua empresa sem compromisso, identificando gargalos e oportunidades de organização.',
     icon: 'tabler-search'
   },
   {
     step: '02',
     title: 'Planejamento & Proposta',
-    description: 'Elaboramos uma estratégia personalizada com a projeção real de redução de custos fiscais, cronograma de implementação e proposta orçamentária transparente.',
+    description: 'Elaboramos uma proposta personalizada com cronograma de implementação, escopo de serviços e orçamento transparente.',
     icon: 'tabler-file-analytics'
   },
   {
     step: '03',
-    title: 'Execução & Implementação Segura',
-    description: 'Nossa equipe de peritos e contadores conduz a execução operacional, reorganização tributária e restituição de valores com 100% de amparo na legislação.',
+    title: 'Implementação da Rotina Contábil',
+    description: 'Nossa equipe de contadores assume a rotina contábil, fiscal e de departamento pessoal da sua empresa, com total amparo na legislação.',
     icon: 'tabler-settings-automation'
   },
   {
     step: '04',
     title: 'Acompanhamento & Resultados',
-    description: 'Fornecemos suporte estratégico contínuo, relatórios periódicos de desempenho e blindagem contínua contra mudanças na legislação fiscal.',
+    description: 'Fornecemos suporte contínuo e relatórios periódicos de desempenho, mantendo sua empresa sempre em dia com as obrigações contábeis e fiscais.',
     icon: 'tabler-chart-dots-filled'
   }
 ];
@@ -90,10 +90,10 @@ export default function Servicos() {
       <ContainerWrapper sx={{ py: { xs: 6, md: 10 } }}>
         <Stack sx={{ alignItems: 'center', textAlign: 'center', mb: { xs: 5, md: 7 }, gap: 1.5 }}>
           <Typography variant="h2" sx={{ fontWeight: 700 }}>
-            Qual o Enquadramento da Sua Empresa?
+            Qual a Fase do Seu Negócio?
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 650, lineHeight: 1.7 }}>
-            Cada regime tributário e perfil societário exige uma combinação diferente dos nossos serviços. Veja onde sua empresa se encaixa.
+            Cada fase do negócio pede uma combinação diferente dos nossos serviços. Veja onde sua empresa se encaixa.
           </Typography>
         </Stack>
 
@@ -153,7 +153,7 @@ export default function Servicos() {
               Como Funciona a Parceria com a BNA Contábil
             </Typography>
             <Typography variant="body1" sx={{ color: 'grey.400', maxWidth: 680, lineHeight: 1.7 }}>
-              Um método estruturado, transparente e seguro para transformar a gestão financeira e tributária do seu negócio do diagnóstico aos resultados.
+              Um método estruturado, transparente e seguro para organizar a gestão contábil do seu negócio do diagnóstico aos resultados.
             </Typography>
           </Stack>
 

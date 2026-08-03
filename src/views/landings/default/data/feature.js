@@ -71,34 +71,34 @@ export const featureServices = {
   heading: 'Como Podemos te Ajudar?',
   features: [
     {
-      icon: 'tabler-file-analytics',
-      title: 'Revisão Fiscal',
-      content: 'Análise minuciosa de dados fiscais dos últimos 5 anos para detectar impostos pagos indevidamente.'
-    },
-    {
-      icon: 'tabler-adjustments',
-      title: 'Planejamento Tributário',
-      content: 'Estudo societário e operacional para definir a alternativa legal mais econômica (Lucro Real, Presumido ou Simples).'
+      icon: 'tabler-device-analytics',
+      title: 'BPO Contábil',
+      content: 'Terceirização da gestão contábil e financeira, com precisão técnica e total conformidade no dia a dia.'
     },
     {
       icon: 'tabler-businessplan',
       title: 'Contabilidade Consultiva',
-      content: 'Otimização de rotinas fiscais e contábeis com foco na geração de relatórios estratégicos de apoio a decisões.'
+      content: 'Relatórios gerenciais e indicadores estratégicos para apoiar a tomada de decisão do seu negócio.'
     },
     {
-      icon: 'tabler-cash-banknote',
-      title: 'Recuperação de Créditos',
-      content: 'Identificação e levantamento de créditos de PIS, COFINS, ICMS e IPI por vias administrativas seguras.'
+      icon: 'tabler-users',
+      title: 'Departamento Pessoal',
+      content: 'Admissão, rescisão, cálculo de folha de pagamento, férias, 13º e obrigações trabalhistas em dia.'
     },
     {
-      icon: 'tabler-device-analytics',
-      title: 'BPO Financeiro',
-      content: 'Terceirização da gestão financeira com precisão contábil e total conformidade legal no dia a dia.'
+      icon: 'tabler-building-store',
+      title: 'Abertura de Empresas',
+      content: 'Constituição societária, alvarás e registro para você formalizar ou expandir seu negócio com segurança.'
     },
     {
-      icon: 'tabler-hierarchy',
-      title: 'Planejamento Societário',
-      content: 'Reestruturações societárias, fusões, cisões e constituição de holdings para proteção de patrimônio.'
+      icon: 'tabler-file-analytics',
+      title: 'Escrituração Contábil e Fiscal',
+      content: 'Apuração e envio de escriturações contábeis e fiscais dentro dos prazos legais (SPED, ECD, ECF).'
+    },
+    {
+      icon: 'tabler-receipt-2',
+      title: 'Obrigações Fiscais Mensais',
+      content: 'Cálculo e emissão das guias mensais (DAS, DARF, GPS) com total conformidade e pontualidade.'
     }
   ]
 };
@@ -187,45 +187,19 @@ export const feature23 = {
 
 export const featureWhyUs = {
   heading: 'Nossas Especialidades',
-  caption: 'Conectamos inteligência de dados a soluções práticas e seguras para alavancar a rentabilidade do seu negócio.',
+  caption: 'Conectamos tecnologia e precisão técnica para manter a contabilidade da sua empresa sempre organizada.',
   topics: [
     {
-      icon: 'tabler-cash-banknote',
-      title: 'Recuperação de Créditos',
-      title2: 'Recupere o Fluxo de Caixa Perdido',
-      description: 'Nossa auditoria digital mapeia inconsistências e créditos acumulados de impostos (PIS/COFINS, ICMS e IPI) prontos para compensação administrativa imediata.',
-      image: '/assets/images/blog/post2.jpg',
+      icon: 'tabler-device-analytics',
+      title: 'BPO Contábil',
+      title2: 'Sua Gestão Contábil em Mãos Especializadas',
+      description: 'Terceirizamos a operação contábil e financeira do dia a dia da sua empresa com precisão técnica e total conformidade, liberando a gestão para focar no core business.',
+      image: '/assets/images/blog/post6.jpg',
       list: [
-        { primary: 'Auditoria eletrônica automatizada dos últimos 60 meses' },
-        { primary: 'Créditos monofásicos e exclusão do ICMS na base de cálculo' },
-        { primary: 'Processo 100% administrativo, rápido e seguro' },
-        { primary: 'Estrita conformidade com as regras da Receita Federal' }
-      ]
-    },
-    {
-      icon: 'tabler-file-analytics',
-      title: 'Planejamento Fiscal',
-      title2: 'Redução Legal da Carga Tributária',
-      description: 'Modelamos cenários operacionais complexos para estruturar a alternativa legal de menor imposto possível para sua empresa.',
-      image: '/assets/images/blog/post1.jpg',
-      list: [
-        { primary: 'Transição estratégica entre regimes (Lucro Real vs. Presumido)' },
-        { primary: 'Aproveitamento de incentivos e benefícios fiscais estaduais' },
-        { primary: 'Planejamento tributário logístico e de e-commerce' },
-        { primary: 'Prevenção contra contingências e multas fiscais' }
-      ]
-    },
-    {
-      icon: 'tabler-shield',
-      title: 'Gestão de Passivos e Defesas',
-      title2: 'Segurança Jurídica e Defesas Técnicas',
-      description: 'Aproveitamos a ampla bagagem jurídica da BNA para redigir defesas administrativas robustas e atuar na blindagem e prevenção de riscos dos sócios.',
-      image: '/assets/images/blog/post3.jpg',
-      list: [
-        { primary: 'Elaboração de impugnações e defesas fiscais de alto nível' },
-        { primary: 'Acompanhamento de fiscalizações municipais, estaduais e federais' },
-        { primary: 'Consultoria preventiva e blindagem patrimonial de sócios' },
-        { primary: 'Estruturação de parcelamentos especiais e CND' }
+        { primary: 'Contas a pagar e a receber com conciliação bancária diária' },
+        { primary: 'Emissão e controle de notas fiscais e boletos' },
+        { primary: 'Fluxo de caixa consolidado e projeções financeiras' },
+        { primary: 'Conformidade fiscal e contábil no dia a dia' }
       ]
     },
     {
@@ -233,38 +207,64 @@ export const featureWhyUs = {
       title: 'Contabilidade Consultiva',
       title2: 'Contabilidade que Vira Decisão Estratégica',
       description: 'Vamos além da escrituração obrigatória: transformamos os dados contábeis da sua empresa em relatórios gerenciais e indicadores que apoiam decisões de crescimento, investimento e precificação.',
-      image: '/assets/images/blog/post4.jpg',
+      image: '/assets/images/blog/post3.jpg',
       list: [
         { primary: 'Relatórios gerenciais mensais com indicadores de performance (DRE gerencial, fluxo de caixa)' },
         { primary: 'Reuniões periódicas de alinhamento com sócios e diretoria financeira' },
-        { primary: 'Otimização de rotinas fiscais e contábeis com uso de tecnologia' },
+        { primary: 'Otimização de rotinas contábeis com uso de tecnologia' },
         { primary: 'Suporte direto na tomada de decisão para expansão e novos investimentos' }
       ]
     },
     {
-      icon: 'tabler-device-analytics',
-      title: 'BPO Financeiro',
-      title2: 'Sua Gestão Financeira em Mãos Especializadas',
-      description: 'Terceirizamos a operação financeira do dia a dia da sua empresa com precisão contábil e total conformidade legal, liberando a gestão para focar no core business.',
-      image: '/assets/images/blog/post6.jpg',
+      icon: 'tabler-users',
+      title: 'Departamento Pessoal',
+      title2: 'Sua Folha de Pagamento Sempre em Dia',
+      description: 'Cuidamos de toda a rotina de departamento pessoal da sua empresa, da admissão ao desligamento, com precisão e dentro dos prazos legais.',
+      image: '/assets/images/blog/post2.jpg',
       list: [
-        { primary: 'Contas a pagar e a receber com conciliação bancária diária' },
-        { primary: 'Emissão e controle de notas fiscais e boletos' },
-        { primary: 'Fluxo de caixa consolidado e projeções financeiras' },
-        { primary: 'Conformidade legal integral com apuração e obrigações fiscais' }
+        { primary: 'Admissão, rescisão e cálculo de férias e 13º salário' },
+        { primary: 'Folha de pagamento mensal e encargos trabalhistas' },
+        { primary: 'Envio das obrigações do eSocial dentro do prazo' },
+        { primary: 'Suporte direto para dúvidas de RH e colaboradores' }
       ]
     },
     {
-      icon: 'tabler-hierarchy',
-      title: 'Planejamento Societário',
-      title2: 'Estrutura Societária Blindada e Eficiente',
-      description: 'Estruturamos e reorganizamos o desenho societário da sua empresa para reduzir riscos, otimizar a carga tributária e proteger o patrimônio dos sócios em operações de crescimento.',
+      icon: 'tabler-building-store',
+      title: 'Abertura de Empresas',
+      title2: 'Formalize seu Negócio com Segurança',
+      description: 'Cuidamos de toda a burocracia para abrir, alterar ou legalizar sua empresa, para você começar a operar rapidamente e sem dor de cabeça.',
+      image: '/assets/images/blog/post1.jpg',
+      list: [
+        { primary: 'Constituição societária e registro nos órgãos competentes' },
+        { primary: 'Emissão de alvarás e licenças necessárias' },
+        { primary: 'Regularização completa perante prefeitura, estado e União' },
+        { primary: 'Alterações contratuais e atualizações societárias' }
+      ]
+    },
+    {
+      icon: 'tabler-file-analytics',
+      title: 'Escrituração Contábil e Fiscal',
+      title2: 'Livros e Escriturações Sempre em Ordem',
+      description: 'Mantemos a escrituração contábil e fiscal da sua empresa em dia, com envio pontual das obrigações acessórias exigidas por lei.',
       image: '/assets/images/blog/post5.jpg',
       list: [
-        { primary: 'Constituição e reestruturação de holdings patrimoniais e familiares' },
-        { primary: 'Fusões, cisões e incorporações societárias' },
-        { primary: 'Sucessão empresarial e planejamento patrimonial' },
-        { primary: 'Blindagem patrimonial dos sócios em operações de risco' }
+        { primary: 'Escrituração Contábil Digital (ECD) e Fiscal (ECF)' },
+        { primary: 'Envio de SPED Fiscal e Contribuições dentro do prazo' },
+        { primary: 'Balanços e demonstrações contábeis atualizados' },
+        { primary: 'Organização documental para auditorias e certidões' }
+      ]
+    },
+    {
+      icon: 'tabler-receipt-2',
+      title: 'Obrigações Fiscais Mensais',
+      title2: 'Guias e Impostos Calculados com Precisão',
+      description: 'Calculamos e emitimos as guias mensais da sua empresa dentro do prazo, evitando multas e juros por atraso.',
+      image: '/assets/images/blog/post4.jpg',
+      list: [
+        { primary: 'Apuração mensal de DAS, DARF e GPS' },
+        { primary: 'Conferência de dados antes do envio para evitar erros' },
+        { primary: 'Prazos e vencimentos organizados para cada obrigação' },
+        { primary: 'Suporte para dúvidas sobre guias e vencimentos' }
       ]
     }
   ]

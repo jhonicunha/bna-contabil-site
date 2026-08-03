@@ -51,7 +51,7 @@ const data = [
     grid: { size: { xs: 6, sm: 'auto' } },
     title: 'Links Úteis',
     menu: [
-      { label: 'BNA Advocacia', link: { href: 'https://bnaconsultoria.com.br', ...linkProps } },
+      { label: 'BNA Consultoria (Tributário e Jurídico)', link: { href: 'https://bnaconsultoria.com.br', ...linkProps } },
       { label: 'Receita Federal', link: { href: 'https://www.gov.br/receitafederal', ...linkProps } },
       { label: 'Conselho de Contabilidade (CRC-PR)', link: { href: 'https://www.crcpr.org.br', ...linkProps } },
       { label: 'Portal do Simples Nacional', link: { href: 'https://www8.receita.fazenda.gov.br/SimplesNacional', ...linkProps } }
@@ -86,7 +86,7 @@ export default function Footer() {
     <Stack sx={{ alignItems: 'flex-start', gap: { xs: 1.5, sm: 3 } }}>
       <LogoSection />
       <Typography variant="body2" sx={{ maxWidth: { sm: 300 }, mt: 2 }}>
-        Inteligência fiscal e contabilidade estratégica aliadas à solidez e excelência jurídica da BNA Consultoria.
+        Contabilidade estratégica e BPO contábil para simplificar a gestão financeira da sua empresa.
       </Typography>
     </Stack>
   );
